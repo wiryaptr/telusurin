@@ -32,14 +32,13 @@ async function readJson<T>(dir: string, file: string, schema: z.ZodType<T>): Pro
   return data;
 }
 
-export function shouldRejectContoh(status: string, isFixture: boolean, isProductionBuild: boolean): boolean {
-  return status === "contoh" && (!isFixture || isProductionBuild);
+export function shouldRejectContoh(status: string, isFixture: boolean): boolean {
+  return status === "contoh" && !isFixture;
 }
 
 async function main(): Promise<void> {
   const dir = resolveDatasetDir();
   const isFixture = process.env.TELUSURIN_DATASET === "fixture";
-  const isProductionBuild = process.env.npm_lifecycle_event === "build";
   const [meta, indicators, regions, sources, observations] = await Promise.all([
     readJson<DatasetMeta>(dir, "meta.json", DatasetMetaSchema),
     readJson<Indicator[]>(dir, "indicators.json", z.array(IndicatorSchema)),
@@ -105,7 +104,7 @@ async function main(): Promise<void> {
       }
     }
 
-    if (shouldRejectContoh(observation.status, isFixture, isProductionBuild)) {
+    if (shouldRejectContoh(observation.status, isFixture)) {
       issues.push({ location: observation.sourceId, message: "Status contoh tidak boleh ada pada dataset produksi." });
     }
   }

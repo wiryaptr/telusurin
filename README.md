@@ -48,9 +48,9 @@ Proyek ini dikembangkan dengan bantuan alat bantu AI untuk mempercepat penulisan
 
 | Nama | Peran |
 | --- | --- |
-| [ISI] | [ISI] |
-| [ISI] | [ISI] |
-| [ISI] | [ISI] |
+| Arya WIrya Putra Jatmiko   | [ISI] |
+| Mirza Fadhil Naufal        | [ISI] |
+| Muhammad Afifudin Zain     | [ISI] |
 
 ## Lisensi
 

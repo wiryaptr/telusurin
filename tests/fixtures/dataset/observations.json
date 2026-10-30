@@ -1,0 +1,203 @@
+[
+  {
+    "regionCode": "f01",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 60,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f01",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 62,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f01",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 61,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f01",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 64,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f01",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 66,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f02",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 55,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f02",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 57,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f02",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 58,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f02",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 60,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f02",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 59,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f03",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": null,
+    "nullReason": "belum_dilaporkan",
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f03",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 50,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f03",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 52,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f03",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 53,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f03",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 55,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f04",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 58,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f04",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 59,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f04",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 60,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f04",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 61,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f04",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 63,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f05",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 61,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f05",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 63,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f05",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 62,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f05",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 65,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  },
+  {
+    "regionCode": "f05",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 67,
+    "status": "contoh",
+    "sourceId": "srcpend"
+  }
+]

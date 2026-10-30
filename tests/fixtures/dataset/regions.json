@@ -1,0 +1,27 @@
+[
+  {
+    "code": "f01",
+    "name": "Kabupaten Nusantara",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "f02",
+    "name": "Kabupaten Sejahtera",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "f03",
+    "name": "Kota Mandiri",
+    "kind": "kota"
+  },
+  {
+    "code": "f04",
+    "name": "Kabupaten Berkembang",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "f05",
+    "name": "Kota Terang",
+    "kind": "kota"
+  }
+]

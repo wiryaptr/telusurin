@@ -1,0 +1,37 @@
+{
+  "id": "telusurin-fixture",
+  "version": "0.1.0",
+  "title": "Telusurin Contoh",
+  "province": {
+    "code": "99",
+    "name": "Provinsi Contoh"
+  },
+  "regionCodeSystem": "KodeBPS",
+  "updatedAt": "2026-10-25",
+  "years": {
+    "from": 2020,
+    "to": 2024
+  },
+  "sources": [
+    {
+      "id": "srcpend",
+      "name": "Buku Pendidikan Tahunan (contoh)",
+      "publisher": "Kementerian Pendidikan (contoh)",
+      "url": "https://contoh.example.org/sumber/pendidikan",
+      "retrievedAt": "2026-10-25",
+      "termsStatus": "belum_diperiksa",
+      "termsNote": "Ketentuan penggunaan belum diperiksa.",
+      "citation": "Kementerian Pendidikan (contoh). Buku Pendidikan Tahunan (contoh)."
+    }
+  ],
+  "limitations": [
+    "Dataset contoh untuk pengujian pengembangan dan tidak masuk build produksi."
+  ],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-25",
+      "change": "Dataset contoh untuk pengujian."
+    }
+  ]
+}

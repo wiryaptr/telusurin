@@ -1,0 +1,1 @@
+- ketuk.app (2026-10-28): Inspirasi pola hero rata tengah, kartu fitur, dan footer gelap (hanya pola visual).

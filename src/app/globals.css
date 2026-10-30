@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #faf8f3;
+  --ink: #1b1f23;
+  --ink-muted: #4a5058;
+  --rule: #d9d4c7;
+  --border-control: #8c877a;
+  --accent: #0b5c63;
+  --on-accent: #ffffff;
+  --status-resmi-bg: #e3f1e8;
+  --status-resmi-fg: #1f5f3a;
+  --status-belum-bg: #fbe6e3;
+  --status-belum-fg: #8a1f1f;
+  --status-contoh-bg: #fff1cc;
+  --status-contoh-fg: #5c4300;
+  --series-1: #0072b2;
+  --series-2: #c2500a;
+  --series-3: #007a5c;
+  --series-4: #a33c78;
+  --series-5: #6b5b00;
+  --radius-control: 12px;
+  --container: 1120px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-border-control: var(--border-control);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-status-resmi-bg: var(--status-resmi-bg);
+  --color-status-resmi-fg: var(--status-resmi-fg);
+  --color-status-belum-bg: var(--status-belum-bg);
+  --color-status-belum-fg: var(--status-belum-fg);
+  --color-status-contoh-bg: var(--status-contoh-bg);
+  --color-status-contoh-fg: var(--status-contoh-fg);
+  --color-series-1: var(--series-1);
+  --color-series-2: var(--series-2);
+  --color-series-3: var(--series-3);
+  --color-series-4: var(--series-4);
+  --color-series-5: var(--series-5);
+  --font-serif: "Inter", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Inter", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-card: 12px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
 }

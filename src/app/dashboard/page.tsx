@@ -1,0 +1,338 @@
+"use server";
+
+import { Suspense } from "react";
+import { resolveDatasetDir, getMeta, getIndicators, getRegions, getSources, getObservations } from "@/server/data/DataRepository";
+import { simpleMean, availableYears as availableYearsFn, getCoverageText } from "@/domain/calculations";
+import { MIN_REGIONS } from "@/domain/constants";
+import { resolveDashboardParams } from "@/features/dashboard/url";
+import { FilterPanel } from "@/features/dashboard/FilterPanel";
+import { TrendChart } from "@/features/dashboard/TrendChart";
+import { ComparisonChart } from "@/features/dashboard/ComparisonChart";
+import { NotificationBanner } from "@/features/dashboard/NotificationBanner";
+import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
+import { StatusBadge } from "@/components/layout/StatusBadge";
+import { getStatusInfo } from "@/lib/status";
+import type { DataStatus, Indicator, Observation, Region } from "@/domain/schemas";
+
+
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ i?: string; y?: string; r?: string }>;
+}) {
+  return (
+    <Suspense fallback={null}>
+      <Dashboard searchParams={searchParams} />
+    </Suspense>
+  );
+}
+
+async function Dashboard({
+  searchParams,
+}: {
+  searchParams: Promise<{ i?: string; y?: string; r?: string }>;
+}) {
+  const params = await searchParams;
+  const dir = resolveDatasetDir();
+
+  const [meta, indicators, regions] = await Promise.all([
+    getMeta(dir),
+    getIndicators(dir),
+    getRegions(dir),
+  ]);
+
+  // Butir 7: Pastikan availableYears berisi rentang tahun dari meta bila ada
+  const yearsRange: number[] = [];
+  if (meta.years) {
+    for (let y = meta.years.from; y <= meta.years.to; y++) {
+      yearsRange.push(y);
+    }
+  }
+
+  const resolved = resolveDashboardParams(
+    params,
+    indicators,
+    regions,
+    yearsRange,
+  );
+
+  const { indicator, year, regionCodes, notification } = resolved;
+
+
+  const observations = await getObservations(dir, indicator.code);
+  const allObservations = await getObservations(dir, indicator.code);
+  
+  // Saring observations berdasarkan regionCodes client-side
+  const filteredObservations = observations.filter(o => regionCodes.includes(o.regionCode));
+
+  // Butir 1: Hitung rata-rata hanya dari observasi tahun terpilih, satu per daerah unik
+  const uniqueRegionValues = new Map<string, number>();
+  for (const obs of allObservations) {
+    if (obs.year === year && obs.value !== null) {
+      // Pastikan hanya satu nilai per daerah
+      uniqueRegionValues.set(obs.regionCode, obs.value);
+    }
+  }
+  const meanResult = simpleMean(Array.from(uniqueRegionValues.values()));
+
+  // Butir 2: Cakupan
+  const coverageText = getCoverageText(regions.length, allObservations, year);
+
+  // Spec 4.4: tahun tersedia = tahun dengan sekurang-kurangnya MIN_REGIONS daerah bernilai
+  const availableYears = availableYearsFn(allObservations, MIN_REGIONS);
+
+  const sources = await getSources(dir);
+
+
+  // Butir 3: DataStatusBanner wajib tampil bila dataset bukan resmi
+  const datasetStatus: DataStatus = filteredObservations.some(o => o.status === "contoh") ? "contoh" : 
+                         filteredObservations.some(o => o.status === "belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
+
+  return (
+    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans">
+      <DataStatusBanner status={datasetStatus} />
+      <div className="px-4 py-24 sm:px-6 lg:flex lg:gap-12">
+        <aside className="lg:w-80 shrink-0 mb-8 lg:mb-0">
+          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm sticky top-6">
+            <h2 className="font-sans text-xl font-bold text-ink mb-6 pb-4 border-b border-rule">Pilih data</h2>
+            <FilterPanel
+              indicators={indicators.map((item) => ({ code: item.code, name: item.name }))}
+              availableYears={availableYears}
+              regions={regions.map((item) => ({ code: item.code, name: item.name, kind: item.kind }))}
+              indicatorCode={indicator.code}
+              year={year}
+              regionCodes={regionCodes}
+              notification={notification}
+            />
+          </div>
+        </aside>
+
+        <div className="flex-1 space-y-12">
+        {notification && (
+          <NotificationBanner message={notification} />
+        )}
+        <div className="bg-white p-8 rounded-2xl border border-rule shadow-sm">
+          <div className="flex items-baseline justify-between flex-wrap gap-4 mb-2">
+            <h1 className="text-3xl font-extrabold tracking-tight text-ink">
+              {indicator.name}
+            </h1>
+            <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+              {indicator.unitShort}
+            </span>
+          </div>
+          <p className="text-sm text-ink-muted">Cakupan: {coverageText}</p>
+        </div>
+
+        <TrendChart
+          regions={regions.map((item) => ({ code: item.code, name: item.name }))}
+          regionCodes={regionCodes}
+          years={availableYears}
+          observations={filteredObservations}
+          unit={indicator.unit}
+          indicatorName={indicator.name}
+          decimals={indicator.decimals}
+        />
+        <ComparisonChart
+          regions={regions.map((item) => ({ code: item.code, name: item.name }))}
+          regionCodes={regionCodes}
+          year={year}
+          observations={filteredObservations}
+          allRegionsMean={meanResult.mean}
+          allRegionsMeanN={meanResult.n}
+          unitShort={indicator.unitShort}
+          indicatorName={indicator.name}
+        />
+        <ChartFooterServer
+          indicator={indicator}
+          observations={filteredObservations}
+          sources={sources}
+        />
+
+
+        <DataTableServer
+          regions={regions}
+          regionCodes={regionCodes}
+          years={availableYears}
+          observations={filteredObservations}
+          selectedYear={year}
+          indicator={indicator}
+          meanResult={meanResult}
+        />
+      </div>
+    </div>
+  </main>
+);
+}
+
+
+function DataTableServer({
+  regions,
+  regionCodes,
+  years,
+  observations,
+  selectedYear,
+  indicator,
+  meanResult,
+}: {
+  regions: Region[];
+  regionCodes: string[];
+  years: number[];
+  observations: Observation[];
+  selectedYear: number;
+  indicator: Indicator;
+  meanResult: { mean: number | null; n: number };
+}) {
+  const observationsByRegionYear = new Map<string, Map<number, Observation>>();
+  for (const observation of observations) {
+    let byYear = observationsByRegionYear.get(observation.regionCode);
+    if (!byYear) {
+      byYear = new Map();
+      observationsByRegionYear.set(observation.regionCode, byYear);
+    }
+    byYear.set(observation.year, observation);
+  }
+
+  const hasNonResmi = Array.from(observationsByRegionYear.values()).some(byYear => 
+    Array.from(byYear.values()).some(o => o.status !== "resmi")
+  );
+
+  return (
+    <section className="bg-white p-6 md:p-8 rounded-2xl border border-rule shadow-sm overflow-hidden">
+      <h2 className="font-sans text-xl font-bold text-ink mb-1">
+        Tabel data {indicator.name}
+      </h2>
+      <p className="text-sm text-ink-muted mb-6">Satuan: {indicator.unit}</p>
+      <div className="overflow-x-auto rounded-xl border border-rule">
+        <table className="w-full border-collapse text-left text-sm whitespace-nowrap">
+          <thead>
+            <tr className="border-b border-rule bg-ink/[0.03] text-ink-muted uppercase tracking-wider text-[10px]">
+              <th className="py-3 pr-4 text-left font-bold sticky left-0 bg-white z-10">Daerah</th>
+              {years.map((yearItem) => (
+                <th
+                  key={yearItem}
+                  className={`py-3 px-4 text-right font-bold ${yearItem === selectedYear ? "text-ink ring-1 ring-rule rounded-t-sm" : ""}`}
+                >
+                  {yearItem}{yearItem === selectedYear ? " (dipilih)" : ""}
+                </th>
+              ))}
+              <th className="py-3 pl-4 text-right font-bold">
+                Selisih vs rata-rata ({selectedYear})
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {regionCodes.map((code) => {
+              const region = regions.find((item) => item.code === code);
+              const byYear = observationsByRegionYear.get(code) ?? new Map();
+              const selisihObs = byYear.get(selectedYear);
+              const selisih =
+                selisihObs?.value !== null && meanResult.mean !== null
+                  ? selisihObs.value - meanResult.mean
+                  : null;
+              return (
+                <tr key={code} className="border-b border-rule hover:bg-black/[0.02]">
+                  <td className="py-3 pr-4 text-ink font-medium sticky left-0 bg-white z-10">{region?.name ?? code}</td>
+                  {years.map((yearItem) => {
+                    const obs = byYear.get(yearItem);
+                    const statusInfo = obs ? getStatusInfo(obs.status) : null;
+                    return (
+                      <td
+                        key={yearItem}
+                        className={`py-3 px-4 text-right tabular-nums ${
+                          obs?.value === null ? "text-ink-muted italic" : "text-ink"
+                        } ${yearItem === selectedYear ? "bg-black/[0.01] ring-1 ring-rule/50" : ""}`}
+                      >
+                        {obs?.value === null
+                          ? nullLabel(obs?.nullReason)
+                          : `${obs.value.toLocaleString("id-ID", {
+                              minimumFractionDigits: indicator.decimals,
+                              maximumFractionDigits: indicator.decimals,
+                            })}${statusInfo?.sign ?? ""}`}
+                      </td>
+                    );
+                  })}
+                  <td className="py-3 pl-4 text-right tabular-nums font-semibold">
+                    {selisih === null ? "-" : (selisih > 0 ? "+" : "") + selisih.toLocaleString("id-ID", {
+                      minimumFractionDigits: indicator.decimals,
+                      maximumFractionDigits: indicator.decimals,
+                    })}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div className="mt-4 space-y-1.5 border-t border-rule/50 pt-4">
+        <p className="text-[11px] text-ink-muted">
+          <span className="font-bold">Keterangan:</span> Nilai kosong ditampilkan sebagai italic (miring). 
+          Rata-rata sederhana ({meanResult.n} daerah) = {meanResult.mean !== null ? meanResult.mean.toLocaleString("id-ID", { maximumFractionDigits: 2 }) : "-"} {indicator.unitShort}.
+        </p>
+        {hasNonResmi && (
+          <p className="text-[11px] text-ink-muted flex gap-4">
+            <span>&dagger; Belum terverifikasi</span>
+            <span>‡ Contoh</span>
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function ChartFooterServer({
+  indicator,
+  observations,
+  sources,
+}: {
+  indicator: Indicator;
+  observations: Observation[];
+  sources: { id: string; name: string; publisher: string; retrievedAt: string; termsStatus: string }[];
+}) {
+  const source = sources.find((item) => indicator.sourceIds.includes(item.id)) ?? sources[0];
+  const statuses = new Set(observations.map((item) => item.status));
+  const effectiveStatus: DataStatus = statuses.has("contoh") ? "contoh" : 
+                                     statuses.has("belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
+
+  return (
+    <section className="mt-2 space-y-4">
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink">
+        <p>
+          <span className="font-bold">Sumber:</span>{" "}
+          <span className="underline decoration-dotted underline-offset-2">{source?.name ?? "-"}</span> ({source?.publisher ?? "-"})
+        </p>
+        <p>
+          <span className="font-bold">Diambil:</span>{" "}
+          {source?.retrievedAt ?? "-"}
+        </p>
+        <div className="flex items-center gap-2">
+          <span className="font-bold">Status:</span>
+          <StatusBadge status={effectiveStatus} />
+        </div>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-4 border-t border-rule/50 pt-4">
+        <div className="space-y-1 text-xs leading-relaxed text-ink-muted">
+          <p className="font-bold text-ink uppercase tracking-wider text-[10px]">Cara membaca</p>
+          <p>
+            Setiap angka disertai satuan, periode, dan sumber. Perbedaan angka antardaerah bukan
+            bukti keberhasilan atau kegagalan pemerintah daerah.
+          </p>
+        </div>
+        <div className="space-y-1 text-xs leading-relaxed text-ink-muted">
+          <p className="font-bold text-ink uppercase tracking-wider text-[10px]">Batas interpretasi</p>
+          <p>
+            Nilai yang lebih tinggi tidak otomatis berarti kondisi lebih baik;
+            arah penilaian bergantung pada definisi indikator.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+function nullLabel(nullReason?: string): string {
+  if (nullReason === "belum_dilaporkan") {
+    return "Belum dilaporkan";
+  }
+  return "Belum tersedia";
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "srcpend",
+    "name": "Buku Pendidikan Tahunan (contoh)",
+    "publisher": "Kementerian Pendidikan (contoh)",
+    "url": "https://contoh.example.org/sumber/pendidikan",
+    "retrievedAt": "2026-10-25",
+    "termsStatus": "belum_diperiksa",
+    "termsNote": "Ketentuan penggunaan belum diperiksa.",
+    "citation": "Kementerian Pendidikan (contoh). Buku Pendidikan Tahunan (contoh)."
+  }
+]

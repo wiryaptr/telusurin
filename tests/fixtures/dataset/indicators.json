@@ -1,0 +1,15 @@
+[
+  {
+    "code": "pend_aps_16_18",
+    "name": "Angka partisipasi sekolah usia 16 sampai 18 tahun",
+    "field": "pendidikan",
+    "valueKind": "percent",
+    "unit": "persen",
+    "unitShort": "persen",
+    "decimals": 2,
+    "definition": "Angka partisipasi sekolah pada usia 16 sampai 18 tahun.",
+    "sourceIds": [
+      "srcpend"
+    ]
+  }
+]

@@ -6,7 +6,11 @@ Dikembangkan untuk WIA MIA 2026. Tema: *Designing Digital Futures: Powering Publ
 
 > Telusurin bukan produk BPS dan tidak didukung BPS.
 
-<!-- Screenshot: -->
+![Landing] (docs/screenshots/landing.png)
+
+![Dashboard] (docs/screenshots/Dashboard.png)
+
+![Metodologi] (docs/screenshots/Metodologi.png)
 
 ## Status saat ini (Draf Pertama)
 

@@ -3,7 +3,6 @@ import { resolveDatasetDir, getSources } from "@/server/data/DataRepository";
 
 export async function SiteFooter() {
   const sources = await getSources(resolveDatasetDir());
-  const source = sources[0];
 
   return (
     <footer className="mt-auto bg-ink text-white">
@@ -25,7 +24,11 @@ export async function SiteFooter() {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-white/50">Sumber Data</h4>
             <ul className="space-y-4">
-              <li><a href={source?.url ?? "#"} target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white transition-colors">{source?.name ?? "-"}</a></li>
+              {sources.map((source) => (
+                <li key={source.id}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white transition-colors">{source.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

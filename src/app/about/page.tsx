@@ -1,5 +1,3 @@
-// Removed unused import
-
 export default function AboutPage() {
   return (
     <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans px-4 py-24 sm:px-6">

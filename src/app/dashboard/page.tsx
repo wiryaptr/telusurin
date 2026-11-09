@@ -9,6 +9,11 @@ import { FilterPanel } from "@/features/dashboard/FilterPanel";
 import { TrendChart } from "@/features/dashboard/TrendChart";
 import { ComparisonChart } from "@/features/dashboard/ComparisonChart";
 import { NotificationBanner } from "@/features/dashboard/NotificationBanner";
+import { DownloadCsvButton } from "@/features/dashboard/DownloadCsvButton";
+import { InsightList } from "@/features/insights/InsightList";
+import { buildInsights } from "@/domain/insights";
+import { buildCsvRows } from "@/lib/csv";
+import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
 import { StatusBadge } from "@/components/layout/StatusBadge";
 import { getStatusInfo } from "@/lib/status";
@@ -41,50 +46,54 @@ async function Dashboard({
     getRegions(dir),
   ]);
 
-  // Butir 7: Pastikan availableYears berisi rentang tahun dari meta bila ada
-  const yearsRange: number[] = [];
-  if (meta.years) {
-    for (let y = meta.years.from; y <= meta.years.to; y++) {
-      yearsRange.push(y);
-    }
-  }
+  // Dua tahap: indikator dipastikan dulu, lalu tahun tersedia dihitung dari data (spec 4.4).
+  const metaYears: number[] = [];
+  for (let y = meta.years.from; y <= meta.years.to; y++) metaYears.push(y);
+  const firstPass = resolveDashboardParams(params, indicators, regions, metaYears);
 
-  const resolved = resolveDashboardParams(
-    params,
-    indicators,
-    regions,
-    yearsRange,
-  );
+  const allObservations = await getObservations(dir, firstPass.indicator.code);
+  const availableYears = availableYearsFn(allObservations, MIN_REGIONS);
 
+  const resolved = resolveDashboardParams(params, indicators, regions, availableYears);
   const { indicator, year, regionCodes, notification } = resolved;
 
+  const filteredObservations = allObservations.filter((o) => regionCodes.includes(o.regionCode));
 
-  const observations = await getObservations(dir, indicator.code);
-  const allObservations = await getObservations(dir, indicator.code);
-  
-  // Saring observations berdasarkan regionCodes client-side
-  const filteredObservations = observations.filter(o => regionCodes.includes(o.regionCode));
-
-  // Butir 1: Hitung rata-rata hanya dari observasi tahun terpilih, satu per daerah unik
+  // Rata-rata dari semua daerah di dataset, satu nilai per daerah pada tahun terpilih
   const uniqueRegionValues = new Map<string, number>();
   for (const obs of allObservations) {
     if (obs.year === year && obs.value !== null) {
-      // Pastikan hanya satu nilai per daerah
       uniqueRegionValues.set(obs.regionCode, obs.value);
     }
   }
   const meanResult = simpleMean(Array.from(uniqueRegionValues.values()));
 
-  // Butir 2: Cakupan
   const coverageText = getCoverageText(regions.length, allObservations, year);
-
-  // Spec 4.4: tahun tersedia = tahun dengan sekurang-kurangnya MIN_REGIONS daerah bernilai
-  const availableYears = availableYearsFn(allObservations, MIN_REGIONS);
 
   const sources = await getSources(dir);
 
 
   // Butir 3: DataStatusBanner wajib tampil bila dataset bukan resmi
+  const selectedRegions = regionCodes
+    .map((code) => regions.find((r) => r.code === code))
+    .filter((r): r is Region => r !== undefined);
+  const insights = buildInsights({
+    indicator,
+    year,
+    regions: selectedRegions,
+    selectedObservations: filteredObservations,
+    allObservations,
+    availableYears,
+  });
+  const csvRows = buildCsvRows({
+    indicator,
+    regions: selectedRegions,
+    years: availableYears,
+    observations: filteredObservations,
+    sources,
+    datasetVersion: meta.version,
+  });
+
   const datasetStatus: DataStatus = filteredObservations.some(o => o.status === "contoh") ? "contoh" : 
                          filteredObservations.some(o => o.status === "belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
 
@@ -111,7 +120,7 @@ async function Dashboard({
         {notification && (
           <NotificationBanner message={notification} />
         )}
-        <div className="bg-white p-8 rounded-2xl border border-rule shadow-sm">
+        <div className="bg-white p-8 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
           <div className="flex items-baseline justify-between flex-wrap gap-4 mb-2">
             <h1 className="text-3xl font-extrabold tracking-tight text-ink">
               {indicator.name}
@@ -142,6 +151,7 @@ async function Dashboard({
           unitShort={indicator.unitShort}
           indicatorName={indicator.name}
         />
+        <InsightList insights={insights} sources={sources} decimals={indicator.decimals} />
         <ChartFooterServer
           indicator={indicator}
           observations={filteredObservations}
@@ -149,6 +159,9 @@ async function Dashboard({
         />
 
 
+        {siteConfig.features.csv && (
+          <DownloadCsvButton rows={csvRows} indicatorCode={indicator.code} />
+        )}
         <DataTableServer
           regions={regions}
           regionCodes={regionCodes}

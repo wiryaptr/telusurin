@@ -25,6 +25,9 @@ Satu baris per keputusan yang punya lebih dari satu alternatif. Status **Diputus
 | D-018 | 2026-10-28 | `cacheComponents` dan `partialPrefetching` dihapus dari next.config.ts setelah error "uncached data during prerendering" pada `/metodologi` | Fitur tersebut tidak diperlukan spec; dataset JSON statis, error terjadi karena cache aktif saat membaca file di page statik | Cache components + Suspense | Diputuskan |
 
 | D-019 | 2026-10-28 | Modernisasi visual "Modern Editorial" terinspirasi pola ketuk.app | Meningkatkan keterbacaan dan kesan profesional sesuai arahan tim | Desain v0.3 (Gading/Serif) | Diputuskan |
+| D-020 | 2026-11-09 | Insight I2 membandingkan tahun tersedia pertama dan terakhir; I3 dibuat per daerah terpilih; I5 `status_belum_resmi` menggantikan seluruh insight bila tidak ada observasi `resmi` | Spec 8 tidak menentukan pasangan tahun untuk I2; pilihan paling sederhana (spec 1 butir 9) | Pasangan tahun yang dipilih pengguna | Diusulkan |
+| D-021 | 2026-11-09 | Dashboard menghitung tahun tersedia dari data (spec 4.4), bukan dari rentang `meta.years`, lewat dua tahap resolusi parameter | Rentang meta bisa memuat tahun yang daerahnya kurang dari 3 | Tetap memakai rentang meta | Diputuskan |
+| D-022 | 2026-11-09 | Fitur CSV diaktifkan (`features.csv = true`); isi CSV sama dengan tabel (D-009) | Syarat F10 Final | Tetap nonaktif | Diputuskan |
 
 ## Templat entri baru
 

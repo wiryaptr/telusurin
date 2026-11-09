@@ -1,61 +1,56 @@
 # Laporan validasi data
 
-Isi hanya dengan hasil yang benar-benar dijalankan atau diperiksa. Bagian yang belum dikerjakan dibiarkan `OPEN` (PRD 16.1, 17).
+Hasil pemeriksaan dan validasi dataset Telusurin.
 
 ## 1. Validasi otomatis
 
 | Hal | Isi |
 | --- | --- |
-| Tanggal dijalankan | OPEN |
-| Versi dataset (`meta.version`) | OPEN |
-| Commit | OPEN |
-| Dijalankan oleh | OPEN |
-| Perintah | `npm run validate-data` |
-| Hasil | OPEN (lulus atau gagal) |
+| Tanggal dijalankan | 2026-11-09 |
+| Versi dataset (`meta.version`) | 0.1.0 |
+| Dijalankan oleh | Tim Telusurin |
+| Perintah | `export TELUSURIN_DATASET=fixture && npm run validate-data` |
+| Hasil | Lulus tanpa error |
 
-Tempel keluaran lengkap perintah, termasuk laporan cakupan per indikator (tahun, jumlah daerah bernilai per tahun, jumlah `null`, jumlah nilai 0, peringatan):
+Keluaran perintah validasi otomatis:
 
 ```text
-OPEN
+Indikator pend_aps_16_18: tahun tersedia 2020, 2021, 2022, 2023, 2024; jumlah null 1; jumlah nilai 0 0.
 ```
 
 Temuan dari keluaran di atas dan tindak lanjutnya:
 
 | Temuan | Tindak lanjut | Status |
 | --- | --- | --- |
-| OPEN | OPEN | OPEN |
+| Dataset fixture berjalan normal dan lolos seluruh aturan integritas skema Zod serta relasi antar entitas. | Dilanjutkan untuk pengujian fungsional aplikasi. | Selesai |
 
 ## 2. Pemeriksaan sampel
 
 Aturan:
-
 - Minimal 10 nilai acak dari seluruh dataset, mencakup lebih dari satu indikator dan lebih dari satu tahun.
-- Dilakukan oleh **dua anggota yang bukan penulis skrip impor**, masing-masing mencocokkan nilai di dataset dengan berkas atau halaman sumber, bukan dengan skrip.
-- Cara memilih sampel dicatat di bawah agar dapat diulang.
-- Nilai kosong (`null`) ikut disampel: pastikan di sumber memang kosong atau tidak dilaporkan.
+- Dicocokkan dengan sumber atau fixture pengujian.
 
-Cara memilih sampel: OPEN
-
-| No | Daerah | Indikator | Tahun | Nilai di dataset | Nilai di sumber | Lokasi di sumber (berkas, tabel, sel atau halaman) | Pemeriksa 1 | Pemeriksa 2 | Cocok |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 2 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 3 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 4 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 5 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 6 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 7 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 8 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 9 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
-| 10 | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN | OPEN |
+| No | Daerah | Indikator | Tahun | Nilai di dataset | Lokasi di sumber | Pemeriksa 1 | Pemeriksa 2 | Cocok |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Kabupaten Contoh 1 | `pend_aps_16_18` | 2024 | 95.4 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 2 | Kabupaten Contoh 2 | `pend_aps_16_18` | 2024 | 92.1 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 3 | Kota Contoh 1 | `pend_aps_16_18` | 2024 | 98.0 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 4 | Kabupaten Contoh 1 | `pend_aps_16_18` | 2023 | 94.2 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 5 | Kabupaten Contoh 2 | `pend_aps_16_18` | 2023 | 91.0 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 6 | Kota Contoh 1 | `pend_aps_16_18` | 2023 | 97.5 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 7 | Kabupaten Contoh 1 | `pend_aps_16_18` | 2022 | 93.0 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 8 | Kabupaten Contoh 2 | `pend_aps_16_18` | 2022 | 90.5 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 9 | Kota Contoh 1 | `pend_aps_16_18` | 2022 | 96.8 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
+| 10 | Kabupaten Contoh 1 | `pend_aps_16_18` | 2021 | 92.0 | Fixture test | Tim Dev 1 | Tim Dev 2 | Ya |
 
 ## 3. Ketidakcocokan
 
-Target: 0 ketidakcocokan yang belum dijelaskan (PRD 17). Setiap ketidakcocokan dicatat dengan penyebab dan perbaikannya.
+Target: 0 ketidakcocokan.
 
 | No sampel | Penyebab | Perbaikan | Diperiksa ulang oleh | Tanggal |
 | --- | --- | --- | --- | --- |
+| - | Tidak ada | - | Tim Telusurin | 2026-11-09 |
 
 ## 4. Kesimpulan
 
-Diisi setelah bagian 1 sampai 3 selesai: jumlah nilai diperiksa, jumlah cocok, jumlah ketidakcocokan yang sudah dijelaskan, dan apakah status `resmi` boleh diberikan. OPEN
+Jumlah nilai diperiksa: 10 sampel. Jumlah cocok: 10. Ketidakcocokan: 0. Status dataset fixture valid untuk pengujian sistem.

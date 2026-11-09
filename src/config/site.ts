@@ -22,6 +22,6 @@ export const siteConfig = {
     },
   },
   features: {
-    csv: false,
+    csv: true,
   },
 } as const;

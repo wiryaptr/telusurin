@@ -36,7 +36,14 @@ export function TrendChart({
   decimals,
 }: TrendChartProps) {
   if (years.length === 0 || regionCodes.length === 0) {
-    return null;
+    return (
+      <section className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
+        <h3 className="text-xl font-bold text-ink mb-6">
+          Tren {indicatorName} per tahun
+        </h3>
+        <p className="text-sm text-ink-muted">Tidak ada data untuk pilihan yang sedang ditampilkan.</p>
+      </section>
+    );
   }
 
   const width = 700;
@@ -182,6 +189,20 @@ export function TrendChart({
         <p className="mt-6 text-sm text-ink-muted">
           Cara membaca: Setiap garis adalah satu daerah. Titik yang hilang berarti data tidak tersedia.
         </p>
+        {regionCodes.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            {regionCodes.map((code) => {
+              const region = regions.find((item) => item.code === code);
+              const slot = slotForIndex(regionCodes.indexOf(code));
+              return (
+                <span key={code} className="flex items-center gap-2 text-xs text-ink">
+                  <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: slot.color }} />
+                  {region?.name ?? code}
+                </span>
+              );
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

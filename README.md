@@ -6,6 +6,7 @@ Dikembangkan untuk WIA MIA 2026. Tema: *Designing Digital Futures: Powering Publ
 
 > Telusurin bukan produk BPS dan tidak didukung BPS.
 
+<<<<<<< HEAD
 ![Landing](docs/screenshots/landing.png)
 
 ![Dashboard](docs/screenshots/Dashboard.png)
@@ -15,6 +16,13 @@ Dikembangkan untuk WIA MIA 2026. Tema: *Designing Digital Futures: Powering Publ
 ## Status saat ini (Draf Pertama)
 
 Data pada draf ini masih **simulasi** (status `contoh`). Data resmi menyusul di tahap Final.
+=======
+<!-- Screenshot: -->
+
+## Status saat ini (Final)
+
+Fitur F1 sampai F10 sudah diimplementasikan. Data pada repository ini masih **simulasi** (status `contoh`); dataset resmi BPS harus diimpor tim sebelum pengumpulan (lihat "Yang masih harus dikerjakan tim").
+>>>>>>> 7904ff0 (feat: BPS production dataset integration and final-stage polish)
 
 | Bagian | Status |
 | --- | --- |
@@ -23,9 +31,10 @@ Data pada draf ini masih **simulasi** (status `contoh`). Data resmi menyusul di 
 | Landing page (F1) | [x] Selesai |
 | Dashboard: indikator, filter daerah, tren, perbandingan, tabel, sumber dan status (F2 sampai F7) | [x] Selesai |
 | Metodologi (F8) | [x] Selesai |
-| Insight berbasis aturan (F9) | [ ] Tahap Final |
-| Ekspor CSV (F10) | [ ] Tahap Final |
-| Integrasi data BPS asli | [ ] Tahap Final |
+| Insight berbasis aturan (F9) | [x] Selesai (`src/domain/insights.ts`, I1 sampai I5, dengan bukti hitung) |
+| Ekspor CSV (F10) | [x] Selesai (`src/lib/csv.ts`, tombol di dashboard) |
+| Metodologi lengkap (PRD 12, butir 1 sampai 12) | [x] Selesai |
+| Integrasi data BPS asli | [ ] **Belum**: butuh unduhan manual dan pemeriksaan sampel oleh tim |
 
 ## Teknologi
 
@@ -68,6 +77,18 @@ Pada draf ini dataset produksi belum tersedia, jadi aplikasi dijalankan dengan d
   - PowerShell: `$env:TELUSURIN_DATASET="fixture"`
   - Bash: `export TELUSURIN_DATASET=fixture`
 - `npm run build` sengaja gagal selama hanya ada data simulasi, karena validasi menolak status `contoh` pada build produksi. Untuk draf ini cukup gunakan `npm run dev`. Build produksi menunggu dataset resmi di tahap Final.
+
+## Yang masih harus dikerjakan tim
+
+1. Unduh data BPS, simpan di `data/raw/<source-id>/`, tulis `scripts/import/<source-id>.ts`, isi `src/data/dataset/*.json` (spec bagian 5). Tidak ada angka yang dikarang untuk mengisi dataset ini.
+2. Pemeriksaan sampel 10 nilai oleh dua anggota, catat di `docs/validation-report.md`; setelah itu status menjadi `resmi` (insight hanya memakai data `resmi`).
+3. `npm run build` baru lolos setelah dataset produksi tanpa status `contoh` ada.
+4. Uji pengguna 3 sampai 5 orang (`docs/user-testing.md`), Lighthouse di produksi, deploy Vercel.
+5. Jalankan `npm install && npm run lint && npm run typecheck && npm test && npm run validate-data`. Kode F9 dan F10 diuji di luar Vitest dan belum dijalankan lewat perintah-perintah ini.
+
+## Format CSV
+
+Koma sebagai pemisah, UTF-8 dengan BOM, akhir baris CRLF, titik desimal. Excel berlokal Indonesia mungkin perlu **Data > Dari Teks/CSV** dengan pemisah koma. Isi mengikuti tabel di dashboard (daerah terpilih, semua tahun tersedia). Nilai kosong tetap kosong dengan alasan di kolom `keterangan_kosong`.
 
 ## Script yang tersedia
 

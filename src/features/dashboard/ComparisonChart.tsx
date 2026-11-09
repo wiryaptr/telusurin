@@ -32,7 +32,14 @@ export function ComparisonChart({
   unitShort,
   indicatorName,
 }: ComparisonChartProps) {
-  if (regionCodes.length === 0) return null;
+  if (regionCodes.length === 0) {
+    return (
+      <section className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
+        <h3 className="text-xl font-bold text-ink mb-6">{indicatorName}</h3>
+        <p className="text-sm text-ink-muted">Tidak ada data untuk pilihan yang sedang ditampilkan.</p>
+      </section>
+    );
+  }
 
   const width = 700;
   const barHeight = 24;

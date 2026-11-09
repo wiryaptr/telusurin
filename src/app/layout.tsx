@@ -4,9 +4,29 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Telusurin",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: {
+    default: "Telusurin",
+    template: "%s | Telusurin",
+  },
   description:
     "Bandingkan layanan publik antardaerah, lengkap dengan sumber dan batas datanya.",
+  openGraph: {
+    title: "Telusurin",
+    description:
+      "Bandingkan layanan publik antardaerah, lengkap dengan sumber dan batas datanya.",
+    type: "website",
+    locale: "id_ID",
+    siteName: "Telusurin",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Telusurin",
+    description:
+      "Bandingkan layanan publik antardaerah, lengkap dengan sumber dan batas datanya.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -49,7 +49,7 @@ async function Landing() {
       <DataStatusBanner status={status} />
       
       {/* Hero Section */}
-      <section className="flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 sm:px-6">
+      <section className="flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 sm:px-6 animate-fade-in-up">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-5xl font-extrabold tracking-tight text-ink sm:text-6xl md:text-7xl">
             {siteConfig.tagline}
@@ -78,12 +78,12 @@ async function Landing() {
       </section>
 
       {/* Feature Cards Section */}
-      <section className="px-4 py-24 sm:px-6">
+      <section className="px-4 py-24 sm:px-6 animate-fade-in-up">
         <div className="mx-auto max-w-[1120px]">
           <div className="grid gap-8 md:grid-cols-3">
             
             {/* Card 1: Perbandingan */}
-            <div className="group flex flex-col">
+            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-6 w-full overflow-hidden rounded-2xl bg-white p-4 border border-rule shadow-sm">
                 <ComparisonChart 
                   regions={previewRegions} 
@@ -98,12 +98,12 @@ async function Landing() {
               </div>
               <h3 className="text-xl font-bold text-ink">Bandingkan daerah</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                Visualisasi data perbandingan antar daerah dengan akurasi tinggi dan label yang jelas.
+                Perbandingan langsung antar daerah, dengan label jelas dan metrik yang konsisten.
               </p>
             </div>
 
             {/* Card 2: Sumber */}
-            <div className="group flex flex-col">
+            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 border border-rule shadow-sm flex flex-col justify-center">
                   <div className="text-[10px] font-bold uppercase tracking-widest text-ink-muted mb-2">Sumber Data Utama</div>
                   <div className="text-sm font-semibold text-ink mb-1">{sources[0]?.name ?? "Belum tersedia"}</div>
@@ -116,7 +116,7 @@ async function Landing() {
             </div>
 
             {/* Card 3: Metodologi */}
-            <div className="group flex flex-col">
+            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 border border-rule shadow-sm flex flex-col justify-center">
                   <div className="rounded-lg border border-rule bg-surface p-4">
                     <div className="text-xs font-bold text-ink mb-1">Cara membaca</div>
@@ -134,7 +134,7 @@ async function Landing() {
       </section>
 
       {/* Data Table Section */}
-      <section className="px-4 py-24 sm:px-6 bg-ink/[0.02] border-y border-rule">
+      <section className="px-4 py-24 sm:px-6 bg-ink/[0.02] border-y border-rule animate-fade-in-up">
         <div className="mx-auto max-w-[1120px]">
           <h2 className="text-3xl font-bold tracking-tight text-ink mb-12">Data yang tersedia</h2>
           <div className="overflow-hidden rounded-2xl border border-rule bg-white shadow-sm">

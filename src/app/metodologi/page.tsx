@@ -1,7 +1,9 @@
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
+import { StatusBadge } from "@/components/layout/StatusBadge";
 import { Suspense } from "react";
-import { resolveDatasetDir, getMeta, getIndicators, getSources } from "@/server/data/DataRepository";
+import { resolveDatasetDir, getMeta, getIndicators, getSources, getObservations } from "@/server/data/DataRepository";
 import type { Observation } from "@/domain/schemas";
+import type { DataStatus } from "@/domain/schemas";
 
 const STATUS_LABELS: Record<string, string> = {
   resmi: "Resmi",
@@ -19,12 +21,15 @@ const FIELD_LABELS: Record<string, string> = {
 export default async function MetodologiPage() {
   const dir = resolveDatasetDir();
   const indicators = await getIndicators(dir);
-  
-  // Perbaiki: fetch observasi tanpa repository class
-  const observations: Observation[] = []; // Sederhanakan untuk metodologi
+  const observations: Observation[] = (
+    await Promise.all(indicators.map((item) => getObservations(dir, item.code)))
+  ).flat();
 
-  const status = observations.some(o => o.status === "contoh") ? "contoh" : 
-                 observations.some(o => o.status === "belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
+  const status: DataStatus = observations.some((o) => o.status === "contoh")
+    ? "contoh"
+    : observations.some((o) => o.status === "belum_terverifikasi")
+      ? "belum_terverifikasi"
+      : "resmi";
 
   return (
     <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans">
@@ -51,7 +56,7 @@ export default async function MetodologiPage() {
   );
 }
 
-async function MetodologiContent({ status }: { status: string }) {
+async function MetodologiContent({ status }: { status: DataStatus }) {
   const dir = resolveDatasetDir();
   const [meta, indicators, sources] = await Promise.all([
     getMeta(dir),
@@ -61,6 +66,10 @@ async function MetodologiContent({ status }: { status: string }) {
 
   return (
     <div className="space-y-12">
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-ink-muted">Status dataset:</span>
+        <StatusBadge status={status} />
+      </div>
       {/* 1. Tujuan dan Cakupan */}
       <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
         <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">
@@ -85,6 +94,18 @@ async function MetodologiContent({ status }: { status: string }) {
               <div className="flex justify-between">
                 <dt className="text-ink-muted">Jumlah indikator</dt>
                 <dd className="font-semibold text-ink">{indicators.length}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-ink-muted">Cakupan geografis</dt>
+                <dd className="font-semibold text-ink">Kabupaten dan kota di {meta.province?.name ?? "-"}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-ink-muted">Pembaruan data</dt>
+                <dd className="font-semibold text-ink">{meta.updatedAt}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-ink-muted">Versi dataset</dt>
+                <dd className="font-semibold text-ink">{meta.version}</dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-ink-muted">Rentang tahun</dt>
@@ -142,7 +163,8 @@ async function MetodologiContent({ status }: { status: string }) {
                   <th className="py-3 px-6">Penerbit</th>
                   <th className="py-3 px-6">URL</th>
                   <th className="py-3 px-6">Diambil</th>
-                  <th className="py-3 px-6">Status</th>
+                  <th className="py-3 px-6">Status ketentuan</th>
+                  <th className="py-3 px-6">Ketentuan dan atribusi</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-rule">
@@ -161,6 +183,7 @@ async function MetodologiContent({ status }: { status: string }) {
                         {STATUS_LABELS[item.termsStatus] ?? item.termsStatus}
                       </span>
                     </td>
+                    <td className="py-4 px-6 text-ink leading-relaxed max-w-sm">{item.termsNote}</td>
                   </tr>
                 ))}
               </tbody>
@@ -207,6 +230,12 @@ async function MetodologiContent({ status }: { status: string }) {
               </p>
             </div>
             <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Selisih</h3>
+              <p className="text-sm text-ink leading-relaxed">
+                Selisih adalah nilai akhir dikurangi nilai awal, atau nilai daerah dikurangi rata-rata. Untuk indikator persen, selisih dinyatakan dalam poin persentase, bukan persen relatif. Dua nilai yang sama pada presisi tampilan dianggap tidak berubah.
+              </p>
+            </div>
+            <div>
               <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Rata-rata</h3>
               <p className="text-sm text-ink leading-relaxed">
                 Rata-rata sederhana dihitung dari semua daerah di dataset yang bernilai pada tahun itu. Bukan angka pada tingkat provinsi dan tidak dibobot jumlah penduduk.
@@ -221,6 +250,65 @@ async function MetodologiContent({ status }: { status: string }) {
           </div>
         </section>
       </div>
+
+      {/* 6. Insight */}
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Aturan pembentukan insight</h2>
+        <p className="text-sm text-ink leading-relaxed mb-6 max-w-3xl">
+          Insight dibuat dengan aturan tetap, tanpa model bahasa, dan hanya dari data berstatus resmi. Setiap kalimat menyebut cakupannya dan punya tautan &ldquo;Lihat dasar hitung&rdquo; berisi nilai dasar, rumus, arti hasil, keterbatasan, dan sumber.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-rule">
+          <table className="w-full text-left text-sm">
+            <thead className="bg-ink/[0.03] text-ink-muted uppercase tracking-wider text-[10px] font-bold">
+              <tr>
+                <th className="py-3 px-6">Aturan</th>
+                <th className="py-3 px-6">Syarat</th>
+                <th className="py-3 px-6">Rumus</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-rule">
+              <tr><td className="py-4 px-6 font-bold text-ink">Tertinggi dan terendah</td><td className="py-4 px-6 text-ink">Minimal 3 daerah terpilih punya nilai pada tahun terpilih</td><td className="py-4 px-6 font-mono text-ink">nilai tertinggi - nilai terendah</td></tr>
+              <tr><td className="py-4 px-6 font-bold text-ink">Perubahan</td><td className="py-4 px-6 text-ink">Daerah terpilih punya nilai pada tahun tersedia pertama dan terakhir</td><td className="py-4 px-6 font-mono text-ink">nilai_B - nilai_A</td></tr>
+              <tr><td className="py-4 px-6 font-bold text-ink">Terhadap rata-rata</td><td className="py-4 px-6 text-ink">Daerah punya nilai dan minimal 3 daerah di dataset punya nilai pada tahun itu</td><td className="py-4 px-6 font-mono text-ink">nilai daerah - rata-rata sederhana</td></tr>
+              <tr><td className="py-4 px-6 font-bold text-ink">Kelengkapan</td><td className="py-4 px-6 text-ink">Ada daerah terpilih tanpa nilai pada tahun terpilih</td><td className="py-4 px-6 font-mono text-ink">jumlah daerah tanpa nilai</td></tr>
+              <tr><td className="py-4 px-6 font-bold text-ink">Data belum cukup</td><td className="py-4 px-6 text-ink">Syarat di atas tidak terpenuhi; kalimat menyebut alasannya</td><td className="py-4 px-6 text-ink">-</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 7. Keterbatasan */}
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Keterbatasan perbandingan</h2>
+        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
+          {meta.limitations.map((item) => (<li key={item}>{item}</li>))}
+          <li>Rata-rata sederhana tidak dibobot jumlah penduduk dan bukan angka resmi provinsi.</li>
+          <li>Perbedaan definisi, metode survei, atau tahun acuan antarsumber dapat memengaruhi perbandingan.</li>
+        </ul>
+        <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mt-8 mb-3">Yang tidak bisa disimpulkan dari data ini</h3>
+        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
+          <li>Nilai yang lebih tinggi tidak otomatis berarti layanan lebih baik atau lebih buruk.</li>
+          <li>Perbedaan antardaerah bukan bukti keberhasilan atau kegagalan pemerintah daerah.</li>
+          <li>Hubungan sebab dan akibat tidak dapat dibuktikan dari angka ini.</li>
+          <li>Kondisi di dalam satu daerah, misalnya antarkecamatan atau antarkelompok, tidak tampak.</li>
+          <li>Tahun atau daerah tanpa nilai tidak dapat diperkirakan dari tahun atau daerah lain.</li>
+          <li>Telusurin bukan produk BPS dan tidak didukung BPS.</li>
+        </ul>
+      </section>
+
+      {/* 8. Changelog */}
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Catatan perubahan dataset</h2>
+        <ol className="space-y-3 text-sm text-ink">
+          {meta.changelog.map((item) => (
+            <li key={`${item.version}-${item.date}`} className="flex gap-4">
+              <span className="font-mono font-bold shrink-0">v{item.version}</span>
+              <span className="text-ink-muted shrink-0">{item.date}</span>
+              <span>{item.change}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
     </div>
   );
 }

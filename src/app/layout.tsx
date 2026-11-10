@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id">
+    <html lang="id" data-theme="dark">
       <body className="flex min-h-full flex-col bg-white" style={{
-        backgroundImage: `radial-gradient(#d9d4c7 1px, transparent 1px)`,
+        backgroundImage: `radial-gradient(var(--rule) 1px, transparent 1px)`,
         backgroundSize: `24px 24px`
       }}>
         <SiteHeader />

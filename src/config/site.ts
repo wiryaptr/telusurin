@@ -5,8 +5,7 @@ export const siteConfig = {
   nav: {
     home: "Beranda",
     dashboard: "Dashboard",
-    metodologi: "Metodologi",
-    about: "Tentang",
+    about: "About",
   },
   statusLabels: {
     resmi: "Resmi",

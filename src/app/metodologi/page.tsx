@@ -32,11 +32,11 @@ export default async function MetodologiPage() {
       : "resmi";
 
   return (
-    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans">
+    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans animate-fade-in">
       <DataStatusBanner status={status} />
-      
+
       {/* Hero Header */}
-      <section className="px-4 py-24 sm:px-6 border-b border-rule bg-white text-center">
+      <section className="px-4 py-24 sm:px-6 border-b border-rule text-center">
         <div className="mx-auto max-w-[1280px]">
           <h1 className="text-3xl font-bold text-ink sm:text-4xl mb-6">
             Metodologi Telusurin
@@ -70,21 +70,17 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
         <span className="text-sm font-medium text-ink-muted">Status dataset:</span>
         <StatusBadge status={status} />
       </div>
+
       {/* 1. Tujuan dan Cakupan */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">
-          Tujuan dan cakupan
-        </h2>
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Tujuan dan cakupan</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             <p className="text-base text-ink mb-4 leading-relaxed">
-              Telusurin membantu masyarakat memahami dan membandingkan indikator
-              layanan publik dasar antardaerah menggunakan data yang dapat
-              ditelusuri. Setiap informasi numerik dilengkapi satuan, periode,
-              sumber, status data, dan batas interpretasi.
+              Telusurin membantu masyarakat memahami dan membandingkan indikator layanan publik dasar antardaerah menggunakan data yang dapat ditelusuri. Setiap informasi numerik dilengkapi satuan, periode, sumber, status data, dan batasan interpretasi.
             </p>
           </div>
-          <div className="bg-ink/[0.02] p-6 rounded-xl border border-rule/50">
+          <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-4">Statistik Dataset</h3>
             <dl className="space-y-3">
               <div className="flex justify-between">
@@ -117,10 +113,8 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
       </section>
 
       {/* 2. Indikator */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">
-          Indikator yang digunakan
-        </h2>
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Indikator yang digunakan</h2>
         <div className="overflow-hidden rounded-xl border border-rule">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -150,10 +144,8 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
       </section>
 
       {/* 3. Sumber Data */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">
-          Sumber data
-        </h2>
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Sumber data</h2>
         <div className="overflow-hidden rounded-xl border border-rule">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -194,7 +186,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
 
       <div className="grid gap-12 md:grid-cols-2">
         {/* 4. Status Data */}
-        <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-10">
+        <section>
           <h2 className="text-xl font-bold text-ink mb-6">Status data</h2>
           <dl className="space-y-6">
             <div className="p-4 rounded-xl border border-rule/50 hover:bg-ink/[0.01]">
@@ -219,7 +211,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
         </section>
 
         {/* 5. Aturan dan Perhitungan */}
-        <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-10">
+        <section>
           <h2 className="text-xl font-bold text-ink mb-6">Aturan & Perhitungan</h2>
           <div className="space-y-8">
             <div>
@@ -252,7 +244,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
       </div>
 
       {/* 6. Insight */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Aturan pembentukan insight</h2>
         <p className="text-sm text-ink leading-relaxed mb-6 max-w-3xl">
           Insight dibuat dengan aturan tetap, tanpa model bahasa, dan hanya dari data berstatus resmi. Setiap kalimat menyebut cakupannya dan punya tautan &ldquo;Lihat dasar hitung&rdquo; berisi nilai dasar, rumus, arti hasil, keterbatasan, dan sumber.
@@ -271,14 +263,14 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
               <tr><td className="py-4 px-6 font-bold text-ink">Perubahan</td><td className="py-4 px-6 text-ink">Daerah terpilih punya nilai pada tahun tersedia pertama dan terakhir</td><td className="py-4 px-6 font-mono text-ink">nilai_B - nilai_A</td></tr>
               <tr><td className="py-4 px-6 font-bold text-ink">Terhadap rata-rata</td><td className="py-4 px-6 text-ink">Daerah punya nilai dan minimal 3 daerah di dataset punya nilai pada tahun itu</td><td className="py-4 px-6 font-mono text-ink">nilai daerah - rata-rata sederhana</td></tr>
               <tr><td className="py-4 px-6 font-bold text-ink">Kelengkapan</td><td className="py-4 px-6 text-ink">Ada daerah terpilih tanpa nilai pada tahun terpilih</td><td className="py-4 px-6 font-mono text-ink">jumlah daerah tanpa nilai</td></tr>
-              <tr><td className="py-4 px-6 font-bold text-ink">Data belum cukup</td><td className="py-4 px-6 text-ink">Syarat di atas tidak terpenuhi; kalimat menyebut alasannya</td><td className="py-4 px-6 text-ink">-</td></tr>
+              <tr><td className="py-4 px-6 font-bold text-ink">Data belum cukup</td><td className="py-4 px-6 text-ink">Syarat di atas tidak terpenuhi; kalimat menyebut alasannya</td><td className="py-4 px-6 font-mono text-ink">-</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       {/* 7. Keterbatasan */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Keterbatasan perbandingan</h2>
         <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
           {meta.limitations.map((item) => (<li key={item}>{item}</li>))}
@@ -297,7 +289,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
       </section>
 
       {/* 8. Changelog */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12">
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Catatan perubahan dataset</h2>
         <ol className="space-y-3 text-sm text-ink">
           {meta.changelog.map((item) => (
@@ -308,6 +300,46 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* 9. Tentang Telusurin */}
+      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Tentang Telusurin</h2>
+        <div className="max-w-3xl">
+          <p className="text-xl text-ink-muted leading-relaxed">
+            Telusurin lahir dari kebutuhan akan transparansi data publik yang mudah diakses, dimengerti, dan diverifikasi oleh siapa saja.
+          </p>
+          <div className="mt-8 space-y-8">
+            <section>
+              <h3 className="text-xl font-bold text-ink mb-4">Visi &amp; Misi</h3>
+              <p className="text-ink-muted leading-relaxed">
+                Visi kami adalah menjadi jembatan antara data publik yang kompleks dengan pemahaman masyarakat. Misi kami adalah menyediakan platform pembanding data yang jujur, tanpa manipulasi, dan sepenuhnya dapat ditelusuri ke sumber aslinya.
+              </p>
+            </section>
+            <section>
+              <h3 className="text-xl font-bold text-ink mb-4">Mengapa Telusurin?</h3>
+              <p className="text-ink-muted leading-relaxed">
+                Seringkali, membandingkan performa layanan publik antar daerah menjadi tantangan karena data tersebar di berbagai dokumen PDF yang sulit diolah. Telusurin hadir untuk mengumpulkan data tersebut ke dalam satu dashboard terpadu, menjadikannya alat bantu pengambilan keputusan berbasis fakta untuk setiap warga.
+              </p>
+            </section>
+            <section>
+              <h3 className="text-xl font-bold text-ink mb-4">Penafian &amp; Independensi</h3>
+              <div className="bg-ink/[0.03] p-8 rounded-2xl border border-rule">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Telusurin adalah inisiatif independen yang dikembangkan untuk kompetisi WIA MIA 2026. Kami menggunakan data statistik resmi (seperti BPS) sebagai sumber utama, namun <strong>Telusurin tidak memiliki hubungan struktural, afiliasi, maupun dukungan resmi dari badan terkait.</strong>
+                </p>
+              </div>
+            </section>
+            <section>
+              <h3 className="text-xl font-bold text-ink mb-4">Prinsip Data Kami</h3>
+              <ul className="space-y-4">
+                <li><strong className="text-ink">Bebas Asumsi:</strong> Kami tidak menambah atau mengurangi angka. Jika data tidak tersedia, kami tampilkan apa adanya.</li>
+                <li><strong className="text-ink">Audit-Ready:</strong> Setiap angka dilengkapi ID sumber agar Anda dapat melakukan audit silang secara mandiri.</li>
+                <li><strong className="text-ink">Netral:</strong> Platform ini tidak memberikan opini daerah mana yang &ldquo;terbaik&rdquo;, melainkan menyajikan fakta numerik untuk interpretasi Anda.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </section>
     </div>
   );

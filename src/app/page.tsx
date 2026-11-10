@@ -4,6 +4,7 @@ import { resolveDatasetDir, getMeta, getIndicators, getRegions, getSources, getO
 import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
 import { ComparisonChart } from "@/features/dashboard/ComparisonChart";
+import { Accordion } from "@/components/ui/Accordion";
 import type { DataStatus } from "@/domain/schemas";
 
 const FIELD_LABELS: Record<string, string> = {
@@ -14,7 +15,7 @@ const FIELD_LABELS: Record<string, string> = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen font-sans">
+    <div className="flex flex-col min-h-screen font-sans animate-fade-in">
       <Suspense fallback={null}>
         <Landing />
       </Suspense>
@@ -49,8 +50,12 @@ async function Landing() {
       <DataStatusBanner status={status} />
       
       {/* Hero Section */}
-      <section className="flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 sm:px-6 animate-fade-in-up">
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 py-16 sm:px-6 animate-fade-in-up">
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/[0.07] blur-3xl" />
+          <div className="absolute -bottom-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-series-1/[0.06] blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-4xl text-center">
           <h1 className="text-5xl font-extrabold tracking-tight text-ink sm:text-6xl md:text-7xl">
             {siteConfig.tagline}
           </h1>
@@ -77,14 +82,14 @@ async function Landing() {
         </div>
       </section>
 
-      {/* Feature Cards Section */}
+      {/* Feature Accordions */}
       <section className="px-4 py-24 sm:px-6 animate-fade-in-up">
         <div className="mx-auto max-w-[1120px]">
           <div className="grid gap-8 md:grid-cols-3">
             
             {/* Card 1: Perbandingan */}
-            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 w-full overflow-hidden rounded-2xl bg-white p-4 border border-rule shadow-sm">
+            <Accordion title="Bandingkan daerah" contentClassName="px-5 pb-5">
+              <div className="mb-6 w-full overflow-hidden rounded-2xl bg-white p-4">
                 <ComparisonChart 
                   regions={previewRegions} 
                   regionCodes={previewRegionCodes}
@@ -96,38 +101,35 @@ async function Landing() {
                   indicatorName={indicator?.name ?? ""}
                 />
               </div>
-              <h3 className="text-xl font-bold text-ink">Bandingkan daerah</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+              <p className="text-sm leading-relaxed text-ink-muted">
                 Perbandingan langsung antar daerah, dengan label jelas dan metrik yang konsisten.
               </p>
-            </div>
+            </Accordion>
 
             {/* Card 2: Sumber */}
-            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 border border-rule shadow-sm flex flex-col justify-center">
+            <Accordion title="Dapat Ditelusuri" contentClassName="px-5 pb-5">
+              <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 flex flex-col justify-center">
                   <div className="text-[10px] font-bold uppercase tracking-widest text-ink-muted mb-2">Sumber Data Utama</div>
                   <div className="text-sm font-semibold text-ink mb-1">{sources[0]?.name ?? "Belum tersedia"}</div>
                   <div className="text-xs text-ink-muted">{sources[0]?.publisher ?? "-"} ({sources[0]?.retrievedAt ?? "-"})</div>
               </div>
-              <h3 className="text-xl font-bold text-ink">Dapat Ditelusuri</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 Setiap angka disertai sumber, tanggal pengambilan, dan status verifikasi yang transparan.
               </p>
-            </div>
+            </Accordion>
 
             {/* Card 3: Metodologi */}
-            <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 border border-rule shadow-sm flex flex-col justify-center">
-                  <div className="rounded-lg border border-rule bg-surface p-4">
+            <Accordion title="Batas Interpretasi" contentClassName="px-5 pb-5">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 flex flex-col justify-center">
+                  <div className="rounded-lg bg-surface p-4">
                     <div className="text-xs font-bold text-ink mb-1">Cara membaca</div>
                     <div className="text-[11px] leading-tight text-ink-muted italic">&ldquo;Nilai lebih besar bukan berarti layanan lebih baik...&rdquo;</div>
                   </div>
               </div>
-              <h3 className="text-xl font-bold text-ink">Batas Interpretasi</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 Panduan untuk menghindari kesalahan penafsiran data dengan batasan interpretasi yang jelas.
               </p>
-            </div>
+            </Accordion>
 
           </div>
         </div>

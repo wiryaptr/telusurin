@@ -2,6 +2,7 @@
 
 import type { Insight } from "@/domain/insights";
 import type { Source } from "@/domain/schemas";
+import { Accordion } from "@/components/ui/Accordion";
 
 interface InsightListProps {
   insights: Insight[];
@@ -13,8 +14,7 @@ export function InsightList({ insights, sources }: InsightListProps) {
   if (!insights.length) return null;
 
   return (
-    <section className="bg-white p-6 md:p-8 rounded-2xl border border-rule shadow-sm space-y-4 animate-fade-in-up">
-      <h2 className="font-sans text-xl font-bold text-ink">Insight otomatis</h2>
+    <Accordion title="Insight otomatis" contentClassName="p-6 md:p-8 space-y-4">
       <p className="text-sm text-ink-muted">
         Insight dibangun dari aturan deterministik, hanya memproses observasi berstatus <code>resmi</code>.
         Setiap insight menyertakan bukti perhitungan (formula, nilai, keterbatasan).
@@ -24,7 +24,7 @@ export function InsightList({ insights, sources }: InsightListProps) {
           <InsightCard key={insight.id} insight={insight} sources={sources} />
         ))}
       </div>
-    </section>
+    </Accordion>
   );
 }
 
@@ -50,8 +50,10 @@ function InsightCard({ insight, sources }: { insight: Insight; sources: Source[]
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </summary>
-      <div className="mt-4 space-y-3 text-xs text-ink-muted border-t border-rule/30 pt-4">
-        <div className="space-y-1">
+      <div className="mt-4 grid grid-rows-[0fr] transition-all duration-300 group-open:grid-rows-[1fr]">
+        <div className="overflow-hidden">
+          <div className="space-y-3 text-xs text-ink-muted border-t border-rule/30 pt-4">
+            <div className="space-y-1">
           <p className="font-medium text-ink">Bukti perhitungan</p>
           <p><strong>Formula:</strong> {e.formula}</p>
           <p><strong>Makna:</strong> {e.meaning}</p>
@@ -75,6 +77,8 @@ function InsightCard({ insight, sources }: { insight: Insight; sources: Source[]
             )}
           </pre>
         </details>
+          </div>
+        </div>
       </div>
     </details>
   );

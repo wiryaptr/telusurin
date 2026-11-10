@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 export function SiteHeader() {
   const { name, nav } = siteConfig;
@@ -10,8 +11,7 @@ export function SiteHeader() {
 
   const navLinks = [
     { href: "/dashboard", label: nav.dashboard },
-    { href: "/metodologi", label: nav.metodologi },
-    { href: "/about", label: nav.about },
+    { href: "/metodologi", label: nav.about },
   ];
 
   return (
@@ -41,6 +41,7 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <ThemeToggle />
         </nav>
       </div>
     </header>

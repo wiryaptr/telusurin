@@ -1,7 +1,34 @@
 @import "tailwindcss";
 
 :root {
+  /* Tema dasar: gelap (base utama) */
+  --bg: #0d1117;
+  --surface: #161b22;
+  --ink: #e6e9ef;
+  --ink-muted: #9aa4b2;
+  --rule: #2a3340;
+  --border-control: #46536b;
+  --accent: #2dd4bf;
+  --on-accent: #0b1220;
+  --status-resmi-bg: #0f2a1f;
+  --status-resmi-fg: #6ee7b7;
+  --status-belum-bg: #2c1618;
+  --status-belum-fg: #fca5a5;
+  --status-contoh-bg: #2c2512;
+  --status-contoh-fg: #fcd34d;
+  --series-1: #60a5fa;
+  --series-2: #fb923c;
+  --series-3: #34d399;
+  --series-4: #c084fc;
+  --series-5: #facc15;
+  --radius-control: 12px;
+  --container: 1120px;
+}
+
+/* Tema terang (opsional, aktif lewat data-theme="light") */
+:root[data-theme="light"] {
   --bg: #faf8f3;
+  --surface: #ffffff;
   --ink: #1b1f23;
   --ink-muted: #4a5058;
   --rule: #d9d4c7;
@@ -19,12 +46,11 @@
   --series-3: #007a5c;
   --series-4: #a33c78;
   --series-5: #6b5b00;
-  --radius-control: 12px;
-  --container: 1120px;
 }
 
 @theme inline {
   --color-surface: var(--bg);
+  --color-white: var(--surface);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-rule: var(--rule);

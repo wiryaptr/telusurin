@@ -15,6 +15,7 @@ import { buildInsights } from "@/domain/insights";
 import { buildCsvRows } from "@/lib/csv";
 import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
+import { Accordion } from "@/components/ui/Accordion";
 import { StatusBadge } from "@/components/layout/StatusBadge";
 import { getStatusInfo } from "@/lib/status";
 import type { DataStatus, Indicator, Observation, Region } from "@/domain/schemas";
@@ -98,7 +99,7 @@ async function Dashboard({
                          filteredObservations.some(o => o.status === "belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
 
   return (
-    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans">
+    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans animate-fade-in">
       <DataStatusBanner status={datasetStatus} />
       <div className="px-4 py-24 sm:px-6 lg:flex lg:gap-12">
         <aside className="lg:w-80 shrink-0 mb-8 lg:mb-0">
@@ -131,6 +132,39 @@ async function Dashboard({
           </div>
           <p className="text-sm text-ink-muted">Cakupan: {coverageText}</p>
         </div>
+
+        {/* KPI strip */}
+        <section className="grid gap-4 sm:grid-cols-3" aria-label="Ringkasan indikator">
+          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Rata-rata wilayah</p>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">
+              {meanResult.mean !== null
+                ? meanResult.mean.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals })
+                : "-"}
+            </p>
+            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Rata-rata antar daerah pada tahun {year}</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Jumlah daerah terdata</p>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">{filteredObservations.filter((o) => o.year === year && o.value !== null).length}</p>
+            <p className="mt-1 text-xs text-ink-muted">Dari total {regions.length} wilayah BPS Jatim</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Rentang nilai</p>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">
+              {(() => {
+                const values = filteredObservations.filter((o) => o.year === year && o.value !== null).map((o) => o.value as number);
+                if (values.length < 2) return "-";
+                const max = Math.max(...values);
+                const min = Math.min(...values);
+                return max.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals }) +
+                  " - " +
+                  min.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals });
+              })()}
+            </p>
+            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Selisih {indicator.unitShort}</p>
+          </div>
+        </section>
 
         <TrendChart
           regions={regions.map((item) => ({ code: item.code, name: item.name }))}
@@ -210,10 +244,7 @@ function DataTableServer({
   );
 
   return (
-    <section className="bg-white p-6 md:p-8 rounded-2xl border border-rule shadow-sm overflow-hidden">
-      <h2 className="font-sans text-xl font-bold text-ink mb-1">
-        Tabel data {indicator.name}
-      </h2>
+    <Accordion title={`Tabel data ${indicator.name}`} contentClassName="p-6 md:p-8">
       <p className="text-sm text-ink-muted mb-6">Satuan: {indicator.unit}</p>
       <div className="overflow-x-auto rounded-xl border border-rule">
         <table className="w-full border-collapse text-left text-sm whitespace-nowrap">
@@ -288,7 +319,7 @@ function DataTableServer({
           </p>
         )}
       </div>
-    </section>
+    </Accordion>
   );
 }
 

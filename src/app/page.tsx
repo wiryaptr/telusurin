@@ -1,14 +1,37 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { resolveDatasetDir, getMeta, getIndicators, getRegions, getSources, getObservations } from "@/server/data/DataRepository";
+import { resolveDatasetDir, getMeta, getIndicators, getSources, getObservations } from "@/server/data/DataRepository";
 import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
-import { ComparisonChart } from "@/features/dashboard/ComparisonChart";
-import { Accordion } from "@/components/ui/Accordion";
 import { AccordionItem } from "@/components/ui/AccordionItem";
 import { PageSkeleton } from "@/components/ui/PageSkeleton";
+import { availableYears as availableYearsFn } from "@/domain/calculations";
 import { MAX_SELECTED_REGIONS } from "@/domain/constants";
 import type { DataStatus } from "@/domain/schemas";
+
+const FEATURES = [
+  {
+    title: "Bandingkan daerah",
+    description:
+      "Pilih sampai 5 kabupaten/kota dan lihat tren serta perbandingannya dengan label jelas dan satuan yang konsisten.",
+    href: "/dashboard",
+    cta: "Buka dashboard",
+  },
+  {
+    title: "Dapat ditelusuri",
+    description:
+      "Setiap angka disertai sumber, tanggal pengambilan, dan status verifikasi, sampai ke tabel BPS asalnya.",
+    href: "/metodologi#data",
+    cta: "Lihat sumber data",
+  },
+  {
+    title: "Batas interpretasi",
+    description:
+      "Nilai yang lebih tinggi belum tentu berarti layanan lebih baik. Panduan membaca membantu menghindari salah tafsir.",
+    href: "/metodologi#batasan",
+    cta: "Baca batasannya",
+  },
+] as const;
 
 export default function Home() {
   return (
@@ -22,25 +45,25 @@ export default function Home() {
 
 async function Landing() {
   const dir = resolveDatasetDir();
-  const [meta, indicators, regions, sources] = await Promise.all([
+  const [meta, indicators, sources] = await Promise.all([
     getMeta(dir),
     getIndicators(dir),
-    getRegions(dir),
     getSources(dir),
   ]);
 
-  const indicator = indicators[0];
-  const observations = indicator 
-    ? await getObservations(dir, indicator.code)
-    : [];
-  
-  const status: DataStatus = observations.some(o => o.status === "contoh") ? "contoh" : "resmi";
+  const observationsByIndicator = await Promise.all(
+    indicators.map((item) => getObservations(dir, item.code)),
+  );
+  const yearsByIndicator = new Map(
+    indicators.map((item, index) => [item.code, availableYearsFn(observationsByIndicator[index] ?? [])]),
+  );
+  const allObservations = observationsByIndicator.flat();
+  const status: DataStatus = allObservations.some((o) => o.status === "contoh")
+    ? "contoh"
+    : allObservations.some((o) => o.status === "belum_terverifikasi")
+      ? "belum_terverifikasi"
+      : "resmi";
 
-  const previewRegions = regions.slice(0, 3);
-  const previewRegionCodes = previewRegions.map(r => r.code);
-  const allRegionsMean = observations.length > 0 
-    ? observations.reduce((sum, o) => sum + (o.value ?? 0), 0) / observations.length 
-    : null;
 
   return (
     <main className="flex-1">
@@ -79,55 +102,25 @@ async function Landing() {
         </div>
       </section>
 
-      {/* Feature Accordions */}
+      {/* Fitur utama */}
       <section className="px-4 py-24 sm:px-6 animate-fade-in-up">
         <div className="mx-auto max-w-[1120px]">
-          <div className="grid gap-8 md:grid-cols-3">
-            
-            {/* Card 1: Perbandingan */}
-            <Accordion title="Bandingkan daerah" contentClassName="px-5 pb-5">
-              <div className="mb-6 w-full overflow-hidden rounded-2xl bg-white p-4">
-                <ComparisonChart 
-                  regions={previewRegions} 
-                  regionCodes={previewRegionCodes}
-                  year={meta.years?.to ?? 0}
-                  observations={observations}
-                  allRegionsMean={allRegionsMean}
-                  allRegionsMeanN={regions.length}
-                  unitShort={indicator?.unitShort ?? ""}
-                  indicatorName={indicator?.name ?? ""}
-                />
-              </div>
-              <p className="text-sm leading-relaxed text-ink-muted">
-                Perbandingan langsung antar daerah, dengan label jelas dan metrik yang konsisten.
-              </p>
-            </Accordion>
-
-            {/* Card 2: Sumber */}
-            <Accordion title="Dapat Ditelusuri" contentClassName="px-5 pb-5">
-              <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 flex flex-col justify-center">
-                  <div className="text-[10px] font-bold uppercase tracking-widest text-ink-muted mb-2">Sumber Data Utama</div>
-                  <div className="text-sm font-semibold text-ink mb-1">{sources[0]?.name ?? "Belum tersedia"}</div>
-                  <div className="text-xs text-ink-muted">{sources[0]?.publisher ?? "-"} ({sources[0]?.retrievedAt ?? "-"})</div>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                Setiap angka disertai sumber, tanggal pengambilan, dan status verifikasi yang transparan.
-              </p>
-            </Accordion>
-
-            {/* Card 3: Metodologi */}
-            <Accordion title="Batas Interpretasi" contentClassName="px-5 pb-5">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white p-6 flex flex-col justify-center">
-                  <div className="rounded-lg bg-surface p-4">
-                    <div className="text-xs font-bold text-ink mb-1">Cara membaca</div>
-                    <div className="text-[11px] leading-tight text-ink-muted italic">&ldquo;Nilai lebih besar bukan berarti layanan lebih baik...&rdquo;</div>
-                  </div>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                Panduan untuk menghindari kesalahan penafsiran data dengan batasan interpretasi yang jelas.
-              </p>
-            </Accordion>
-
+          <div className="grid gap-6 md:grid-cols-3">
+            {FEATURES.map((feature) => (
+              <article
+                key={feature.title}
+                className="flex h-full flex-col rounded-2xl border border-rule bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-xl font-bold text-ink">{feature.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">{feature.description}</p>
+                <Link
+                  href={feature.href}
+                  className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-accent hover:underline"
+                >
+                  {feature.cta}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -142,7 +135,14 @@ async function Landing() {
                 <div className="px-5 pb-5">
                   <p className="text-sm text-ink-muted leading-relaxed">{item.definition}</p>
                   <p className="mt-3 text-sm text-ink-muted">Satuan: {item.unit}</p>
-                  <p className="mt-1 text-sm text-ink-muted">Tahun: {meta.years.from} sampai {meta.years.to}</p>
+                  {(() => {
+                    const years = yearsByIndicator.get(item.code) ?? [];
+                    return (
+                      <p className="mt-1 text-sm text-ink-muted">
+                        Tahun: {years.length > 0 ? `${years[0]} sampai ${years[years.length - 1]}` : "belum tersedia"}
+                      </p>
+                    );
+                  })()}
                   {sources
                     .filter((source) => item.sourceIds.includes(source.id))
                     .map((source) => (

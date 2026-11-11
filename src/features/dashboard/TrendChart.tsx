@@ -38,7 +38,7 @@ export function TrendChart({
   if (years.length === 0 || regionCodes.length === 0) {
     return (
       <section className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
-        <h3 className="text-xl font-bold text-ink mb-6">
+        <h3 className="mb-4 text-lg font-bold text-ink">
           Tren {indicatorName} per tahun
         </h3>
         <p className="text-sm text-ink-muted">Tidak ada data untuk pilihan yang sedang ditampilkan.</p>
@@ -47,8 +47,8 @@ export function TrendChart({
   }
 
   const width = 700;
-  const height = 300;
-  const margin = { top: 60, right: 160, bottom: 40, left: 60 };
+  const height = 280;
+  const margin = { top: 40, right: 150, bottom: 36, left: 56 };
   const plotWidth = width - margin.left - margin.right;
   const plotHeight = height - margin.top - margin.bottom;
 
@@ -57,7 +57,7 @@ export function TrendChart({
     const byYear = regionObservations(observations, regionCode);
     for (const year of years) {
       const value = byYear[year];
-      if (value !== null) {
+      if (value !== null && value !== undefined) {
         allValues.push(value);
       }
     }
@@ -91,12 +91,10 @@ export function TrendChart({
         </h3>
         <div className="relative w-full overflow-x-auto">
           <svg
-            width={width}
-            height={height}
             viewBox={`0 0 ${width} ${height}`}
             role="img"
             aria-labelledby="trend-title"
-            className="block mx-auto"
+            className="block h-auto w-full min-w-[560px]"
           >
             <title id="trend-title">{`Grafik tren ${indicatorName} per tahun`}</title>
 
@@ -132,37 +130,44 @@ export function TrendChart({
               const slot = slotForIndex(slotIndex);
               const byYear = regionObservations(observations, regionCode);
 
-              const points: string[] = [];
+              // Garis dipecah di tahun tanpa nilai agar celah data tidak disambung.
+              const segments: string[][] = [];
+              let current: string[] = [];
               let lastPoint: { x: number; y: number } | null = null;
-              let hasData = false;
 
               for (const year of years) {
                 const value = byYear[year];
-                if (value === null) {
-                  lastPoint = null;
+                if (value === null || value === undefined) {
+                  if (current.length > 0) segments.push(current);
+                  current = [];
                   continue;
                 }
-                hasData = true;
                 const x = xScale(year);
                 const y = yScale(value);
-                points.push(`${x},${y}`);
+                current.push(`${x},${y}`);
                 lastPoint = { x, y };
               }
+              if (current.length > 0) segments.push(current);
 
-              if (!hasData || !lastPoint) return null;
+              if (!lastPoint) return null;
 
               return (
                 <g key={regionCode}>
-                  <polyline
-                    points={points.join(" ")}
-                    fill="none"
-                    stroke={slot.color}
-                    strokeWidth={2}
-                    strokeDasharray={slot.lineDash === "solid" ? undefined : slot.lineDash}
-                  />
+                  {segments
+                    .filter((segment) => segment.length > 1)
+                    .map((segment, segmentIndex) => (
+                      <polyline
+                        key={segmentIndex}
+                        points={segment.join(" ")}
+                        fill="none"
+                        stroke={slot.color}
+                        strokeWidth={2}
+                        strokeDasharray={slot.lineDash === "solid" ? undefined : slot.lineDash}
+                      />
+                    ))}
                   {years.map((year) => {
                     const value = byYear[year];
-                    if (value === null) return null;
+                    if (value === null || value === undefined) return null;
                     const x = xScale(year);
                     const y = yScale(value);
                     const marker = slot.marker === "circle" ? (

@@ -44,7 +44,7 @@ export function ComparisonChart({
   const width = 700;
   const barHeight = 24;
   const gap = 16;
-  const margin = { top: 60, right: 140, bottom: 20, left: 180 };
+  const margin = { top: 44, right: 120, bottom: 12, left: 180 };
   const height = margin.top + margin.bottom + regionCodes.length * (barHeight + gap);
   const plotWidth = width - margin.left - margin.right;
 
@@ -71,17 +71,15 @@ export function ComparisonChart({
   return (
     <section className="space-y-4">
       <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
-        <h3 className="text-xl font-bold text-ink mb-2">{indicatorName}</h3>
-        <p className="text-sm text-ink-muted mb-6">Tahun {year} • Satuan: {unitShort}</p>
+        <h3 className="mb-1 text-lg font-bold text-ink">{indicatorName}</h3>
+        <p className="mb-4 text-sm text-ink-muted">Tahun {year} • Satuan: {unitShort}</p>
         
         <div className="relative overflow-x-auto">
           <svg
-            width={width}
-            height={height}
             viewBox={`0 0 ${width} ${height}`}
             role="img"
             aria-labelledby="comparison-title"
-            className="block"
+            className="block h-auto w-full min-w-[560px]"
           >
             <title id="comparison-title">{`Perbandingan ${indicatorName} tahun ${year}`}</title>
 

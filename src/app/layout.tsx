@@ -31,7 +31,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id" data-theme="dark">
+    <html lang="id" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var t=localStorage.getItem("telusurin-theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t}}catch(e){}',
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-white" style={{
         backgroundImage: `radial-gradient(var(--rule) 1px, transparent 1px)`,
         backgroundSize: `24px 24px`

@@ -12,7 +12,6 @@ interface FilterPanelProps {
   indicatorCode: string;
   year: number;
   regionCodes: string[];
-  notification: string | null;
 }
 
 export function FilterPanel({
@@ -22,7 +21,6 @@ export function FilterPanel({
   indicatorCode,
   year,
   regionCodes,
-  notification,
 }: FilterPanelProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -31,8 +29,7 @@ export function FilterPanel({
   );
 
   const handleIndicatorChange = useCallback(
-    (event: React.ChangeEvent<HTMLSelectElement>) => {
-      const code = event.target.value;
+    (code: string) => {
       const params = new URLSearchParams(searchParams.toString());
       params.set("i", code);
       params.delete("y");
@@ -89,23 +86,34 @@ export function FilterPanel({
 
   return (
     <section className="space-y-6">
-      <div className="space-y-2">
-        <label htmlFor="indikator" className="text-sm font-medium text-ink">
-          Indikator
-        </label>
-        <select
-          id="indikator"
-          value={indicatorCode}
-          onChange={handleIndicatorChange}
-          className="block w-full h-11 px-3 border border-border-control rounded-lg text-sm text-ink bg-white focus:ring-2 focus:ring-accent"
-        >
-          {indicators.map((item) => (
-            <option key={item.code} value={item.code}>
-              {item.name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <fieldset className="space-y-2">
+        <legend className="mb-2 text-sm font-medium text-ink">Indikator</legend>
+        <div className="space-y-2">
+          {indicators.map((item) => {
+            const active = item.code === indicatorCode;
+            return (
+              <label
+                key={item.code}
+                className={`flex cursor-pointer items-start gap-3 rounded-lg border p-3 text-sm leading-snug transition-colors ${
+                  active
+                    ? "border-accent bg-accent/10 text-ink"
+                    : "border-border-control text-ink-muted hover:border-ink hover:text-ink"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="indikator"
+                  value={item.code}
+                  checked={active}
+                  onChange={() => handleIndicatorChange(item.code)}
+                  className="mt-0.5 shrink-0 accent-[var(--accent)]"
+                />
+                <span>{item.name}</span>
+              </label>
+            );
+          })}
+        </div>
+      </fieldset>
 
       <div className="space-y-2">
         <label htmlFor="tahun" className="text-sm font-medium text-ink">
@@ -136,7 +144,7 @@ export function FilterPanel({
           id="daerah"
           role="group"
           aria-label="Pilih daerah yang dibandingkan"
-          className="max-h-64 overflow-y-auto border border-border-control rounded-lg space-y-1 p-2 bg-white"
+          className="max-h-44 space-y-1 overflow-y-auto lg:max-h-72 rounded-lg border border-border-control bg-white p-2"
         >
           {regions.map((item, index) => {
             const isChecked = selected.has(item.code);
@@ -188,12 +196,6 @@ export function FilterPanel({
           </p>
         )}
       </div>
-
-      {notification && (
-        <div className="text-sm text-ink-muted">
-          {notification}
-        </div>
-      )}
     </section>
   );
 }

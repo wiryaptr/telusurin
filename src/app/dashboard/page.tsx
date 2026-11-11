@@ -102,29 +102,29 @@ async function Dashboard({
   return (
     <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans animate-fade-in">
       <DataStatusBanner status={datasetStatus} />
-      <div className="px-4 py-24 sm:px-6 lg:flex lg:gap-12">
-        <aside className="lg:w-80 shrink-0 mb-8 lg:mb-0">
-          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm sticky top-6">
-            <h2 className="font-sans text-xl font-bold text-ink mb-6 pb-4 border-b border-rule">Pilih data</h2>
+      <div className="px-4 py-8 sm:px-6 lg:flex lg:gap-8 lg:py-10">
+        <aside className="mb-6 shrink-0 lg:mb-0 lg:w-80">
+          <div className="sticky top-6 rounded-2xl border border-rule bg-white p-5 shadow-sm">
+            <h2 className="mb-5 border-b border-rule pb-3 font-sans text-lg font-bold text-ink">Pilih data</h2>
             <FilterPanel
+              key={`${indicator.code}|${year}|${regionCodes.join(",")}`}
               indicators={indicators.map((item) => ({ code: item.code, name: item.name }))}
               availableYears={availableYears}
               regions={regions.map((item) => ({ code: item.code, name: item.name, kind: item.kind }))}
               indicatorCode={indicator.code}
               year={year}
               regionCodes={regionCodes}
-              notification={notification}
             />
           </div>
         </aside>
 
-        <div className="flex-1 space-y-12">
+        <div className="min-w-0 flex-1 space-y-6">
         {notification && (
           <NotificationBanner message={notification} />
         )}
-        <div className="bg-white p-8 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
-          <div className="flex items-baseline justify-between flex-wrap gap-4 mb-2">
-            <h1 className="text-3xl font-extrabold tracking-tight text-ink">
+        <div className="rounded-2xl border border-rule bg-white p-6 shadow-sm animate-fade-in-up">
+          <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
+            <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
               {indicator.name}
             </h1>
             <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
@@ -147,8 +147,8 @@ async function Dashboard({
           </div>
           <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
             <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Jumlah daerah terdata</p>
-            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">{filteredObservations.filter((o) => o.year === year && o.value !== null).length}</p>
-            <p className="mt-1 text-xs text-ink-muted">Dari total {regions.length} wilayah BPS Jatim</p>
+            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">{meanResult.n}</p>
+            <p className="mt-1 text-xs text-ink-muted">Dari total {regions.length} wilayah BPS Jatim pada tahun {year}</p>
           </div>
           <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
             <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Rentang nilai</p>
@@ -158,12 +158,11 @@ async function Dashboard({
                 if (values.length < 2) return "-";
                 const max = Math.max(...values);
                 const min = Math.min(...values);
-                return max.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals }) +
-                  " - " +
-                  min.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals });
+                const fmt = (v: number) => v.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals });
+                return fmt(min) + " – " + fmt(max);
               })()}
             </p>
-            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Selisih {indicator.unitShort}</p>
+            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Terendah sampai tertinggi di daerah terpilih</p>
           </div>
         </section>
 
@@ -186,12 +185,12 @@ async function Dashboard({
           unitShort={indicator.unitShort}
           indicatorName={indicator.name}
         />
-        <InsightList insights={insights} sources={sources} decimals={indicator.decimals} />
         <ChartFooterServer
           indicator={indicator}
           observations={filteredObservations}
           sources={sources}
         />
+        <InsightList insights={insights} sources={sources} decimals={indicator.decimals} />
 
 
         {siteConfig.features.csv && (
@@ -271,7 +270,7 @@ function DataTableServer({
               const byYear = observationsByRegionYear.get(code) ?? new Map();
               const selisihObs = byYear.get(selectedYear);
               const selisih =
-                selisihObs?.value !== null && meanResult.mean !== null
+                selisihObs && selisihObs.value !== null && meanResult.mean !== null
                   ? selisihObs.value - meanResult.mean
                   : null;
               return (
@@ -284,10 +283,10 @@ function DataTableServer({
                       <td
                         key={yearItem}
                         className={`py-3 px-4 text-right tabular-nums ${
-                          obs?.value === null ? "text-ink-muted italic" : "text-ink"
+                          !obs || obs.value === null ? "text-ink-muted italic" : "text-ink"
                         } ${yearItem === selectedYear ? "bg-black/[0.01] ring-1 ring-rule/50" : ""}`}
                       >
-                        {obs?.value === null
+                        {!obs || obs.value === null
                           ? nullLabel(obs?.nullReason)
                           : `${obs.value.toLocaleString("id-ID", {
                               minimumFractionDigits: indicator.decimals,
@@ -339,7 +338,7 @@ function ChartFooterServer({
                                      statuses.has("belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
 
   return (
-    <section className="mt-2 space-y-4">
+    <section className="space-y-4 rounded-2xl border border-rule bg-white p-6 shadow-sm">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink">
         <p>
           <span className="font-bold">Sumber:</span>{" "}
@@ -354,7 +353,7 @@ function ChartFooterServer({
           <StatusBadge status={effectiveStatus} />
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 gap-4 border-t border-rule/50 pt-4">
+      <div className="grid gap-4 border-t border-rule/50 pt-4 sm:grid-cols-2">
         <div className="space-y-1 text-xs leading-relaxed text-ink-muted">
           <p className="font-bold text-ink uppercase tracking-wider text-[10px]">Cara membaca</p>
           <p>

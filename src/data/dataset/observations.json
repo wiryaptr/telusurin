@@ -1,0 +1,4258 @@
+[
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 77.61,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 78.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 78.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 79.72,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 70.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 81.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 62.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 52.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 67.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 77.8,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 71.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 65.26,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 60.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 65.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 87.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 81.32,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 87.19,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 81.19,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 78.52,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 88.05,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 77.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 80.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 65.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 69.53,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 85.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 50.47,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 57.61,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 73.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 73.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 86.72,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 89.79,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 84.41,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 81.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 75.79,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 80.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 97.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 67.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2020,
+    "value": 75.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 76.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 80.74,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 77.96,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 79.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 70.46,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 81.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 65.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 55.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 69.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 79.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 71.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 65.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 60.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 64.68,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 87.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 82.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 90.39,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 83.19,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 78.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 88.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 78.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 80.22,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 65.55,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 71.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 85.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 51.28,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 57.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 75.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 75.96,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 87.04,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 91.17,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 84.3,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 82.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 75.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 80.02,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 96.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 69.97,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2021,
+    "value": 76.98,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 78.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 78.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 84.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 78.21,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 68.57,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 85.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 64.52,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 53,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 74.08,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 76.81,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 68.6,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 61.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 63.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 65.01,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 83.2,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 86.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 88.17,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 84.17,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 73.09,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 85.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 76.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 83.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 64.64,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 73.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 83.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 49.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 55.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 73.26,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 78.65,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 87.08,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 90.52,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 80.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 81.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 78.69,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 81.96,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 72.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2022,
+    "value": 80.27,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 79.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 79.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 83.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 78.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 69.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 84.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 65.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 59.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 73.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 74.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 68.71,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 63.52,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 63.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 62.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 82.88,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 81.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 85.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 85.2,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 85.03,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 85.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 78.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 82.68,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 64.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 74.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 82.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 53.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 64.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 75.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 79.81,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 87.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 91.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 80.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 82.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 78.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 82.23,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 74.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 65.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2023,
+    "value": 79.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 84.81,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 83.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 81.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 82.04,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 73.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 81.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 71.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 64.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 74.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 79.98,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 69.97,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 69.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 57.03,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 68.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 88.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 85.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 84.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 91.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 89.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 82.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 82.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 85.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 70.05,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 79.09,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 81.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 53.3,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 62.62,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 65.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 68.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 92.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 94.58,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 86.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 88.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 83.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 87.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 79.96,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 70.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_aps_16_18",
+    "year": 2024,
+    "value": 84.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-aps-16-18"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.6,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.55,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.39,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.02,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 5.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.46,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 10.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.64,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.81,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 7.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 9.3,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 5.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 4.85,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 6.69,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 5.71,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 9.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 10.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 10.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 8.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 9.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 10.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 11.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 10.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_rls",
+    "year": 2020,
+    "value": 9.07,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.61,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.55,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.08,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 6.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 6.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 5.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 6.62,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 6.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.41,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.72,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.64,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.55,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.26,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.38,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 7.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.04,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 9.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 5.96,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 4.86,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 6.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 5.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.41,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 8.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 9.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.47,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 11.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 10.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_rls",
+    "year": 2021,
+    "value": 9.31,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.65,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.23,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.68,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.22,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.97,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 7.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 8.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 9.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 5.97,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 5.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 6.88,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 5.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.65,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.69,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 9.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 9.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.8,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 11.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 10.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_rls",
+    "year": 2022,
+    "value": 9.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.88,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 6.52,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 6.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 6.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 6.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.44,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 9.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 8.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.01,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 5.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 5.07,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 7.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 5.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.69,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 9.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 9.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 11.05,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 11.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 10.7,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_rls",
+    "year": 2023,
+    "value": 9.85,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.8,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.68,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.26,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.8,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.27,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.53,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.31,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.46,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 10.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 9.13,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.2,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.69,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.84,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.53,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 8.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 10.03,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.01,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 5.08,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 7.17,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 6.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 10.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 10.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 11.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 9.72,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 9.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 11.38,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 12.11,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 10.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "pend_rls",
+    "year": 2024,
+    "value": 9.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-rls"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 84.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 91.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 80.64,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 96.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 95.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 98.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 95.48,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 95.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 90.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 91.62,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 91.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 96.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 92.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 97.21,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.2,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 97.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.46,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 96.94,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 97.58,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 92.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 94.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 93.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 89.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 90.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 97.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 98.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.89,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.72,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.83,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 98.74,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "infra_air_layak",
+    "year": 2020,
+    "value": 99.02,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 76.71,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 96.3,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 75.78,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 97.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 93.33,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 96.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 94.14,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 95.73,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 94.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 94.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 93.44,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 98.88,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 93.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 97.36,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 96.82,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 98.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.44,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.03,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 95.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 97.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 96.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 81.98,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 88.99,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 97.39,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 89.34,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 89.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 98.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 98.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 97.08,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.93,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.65,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 99.53,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 98.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "infra_air_layak",
+    "year": 2021,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 83.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 91.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 81.23,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.39,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.37,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 92.17,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.02,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 97.35,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.4,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.97,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 93.31,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.22,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.86,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 97.05,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.07,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 98.67,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 94.79,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 98.71,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 97.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 78.56,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 91.5,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 93.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 93.25,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.24,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 94.6,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.77,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 96.76,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 98.65,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 98.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 95.66,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "infra_air_layak",
+    "year": 2022,
+    "value": 99.12,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3501",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 80.19,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3502",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 94.42,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3503",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 84.87,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3504",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3505",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 96.41,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3506",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 92,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3507",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.18,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3508",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 95.49,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3509",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3510",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.44,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3511",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 94.43,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3512",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.45,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3513",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.75,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3514",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.63,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3515",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.19,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3516",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.9,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3517",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.01,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3518",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.86,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3519",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 96.39,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3520",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.61,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3521",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.51,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3522",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.59,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3523",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 95.22,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3524",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 79.26,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3525",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 92.54,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3526",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 96.3,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3527",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 94.29,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3528",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 97.91,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3529",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3571",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.6,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3572",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.79,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3573",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.06,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3574",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 100,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3575",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.38,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3576",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.95,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3577",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.1,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3578",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 98.15,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  },
+  {
+    "regionCode": "3579",
+    "indicatorCode": "infra_air_layak",
+    "year": 2023,
+    "value": 99.16,
+    "status": "resmi",
+    "sourceId": "bps-jatim-air-minum-layak"
+  }
+]

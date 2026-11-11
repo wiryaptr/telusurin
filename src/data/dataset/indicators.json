@@ -1,0 +1,41 @@
+[
+  {
+    "code": "pend_aps_16_18",
+    "name": "Angka partisipasi sekolah usia 16 sampai 18 tahun",
+    "field": "pendidikan",
+    "valueKind": "percent",
+    "unit": "persen",
+    "unitShort": "persen",
+    "decimals": 2,
+    "definition": "Persentase penduduk usia 16–18 tahun yang bersekolah menurut kabupaten/kota di Jawa Timur.",
+    "sourceIds": [
+      "bps-jatim-aps-16-18"
+    ]
+  },
+  {
+    "code": "pend_rls",
+    "name": "Rata-rata lama sekolah penduduk usia 25 tahun ke atas",
+    "field": "pendidikan",
+    "valueKind": "years",
+    "unit": "tahun",
+    "unitShort": "tahun",
+    "decimals": 2,
+    "definition": "Rata-rata lama sekolah penduduk usia 25 tahun ke atas menurut kabupaten/kota di Jawa Timur.",
+    "sourceIds": [
+      "bps-jatim-rls"
+    ]
+  },
+  {
+    "code": "infra_air_layak",
+    "name": "Persentase rumah tangga dengan akses air minum layak",
+    "field": "infrastruktur_dasar",
+    "valueKind": "percent",
+    "unit": "persen",
+    "unitShort": "persen",
+    "decimals": 2,
+    "definition": "Persentase rumah tangga yang memiliki akses terhadap sumber air minum layak menurut kabupaten/kota di Jawa Timur.",
+    "sourceIds": [
+      "bps-jatim-air-minum-layak"
+    ]
+  }
+]

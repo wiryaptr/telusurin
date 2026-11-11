@@ -1,0 +1,192 @@
+[
+  {
+    "code": "3501",
+    "name": "Kabupaten Pacitan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3502",
+    "name": "Kabupaten Ponorogo",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3503",
+    "name": "Kabupaten Trenggalek",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3504",
+    "name": "Kabupaten Tulungagung",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3505",
+    "name": "Kabupaten Blitar",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3506",
+    "name": "Kabupaten Kediri",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3507",
+    "name": "Kabupaten Malang",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3508",
+    "name": "Kabupaten Lumajang",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3509",
+    "name": "Kabupaten Jember",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3510",
+    "name": "Kabupaten Banyuwangi",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3511",
+    "name": "Kabupaten Bondowoso",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3512",
+    "name": "Kabupaten Situbondo",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3513",
+    "name": "Kabupaten Probolinggo",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3514",
+    "name": "Kabupaten Pasuruan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3515",
+    "name": "Kabupaten Sidoarjo",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3516",
+    "name": "Kabupaten Mojokerto",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3517",
+    "name": "Kabupaten Jombang",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3518",
+    "name": "Kabupaten Nganjuk",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3519",
+    "name": "Kabupaten Madiun",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3520",
+    "name": "Kabupaten Magetan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3521",
+    "name": "Kabupaten Ngawi",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3522",
+    "name": "Kabupaten Bojonegoro",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3523",
+    "name": "Kabupaten Tuban",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3524",
+    "name": "Kabupaten Lamongan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3525",
+    "name": "Kabupaten Gresik",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3526",
+    "name": "Kabupaten Bangkalan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3527",
+    "name": "Kabupaten Sampang",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3528",
+    "name": "Kabupaten Pamekasan",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3529",
+    "name": "Kabupaten Sumenep",
+    "kind": "kabupaten"
+  },
+  {
+    "code": "3571",
+    "name": "Kota Kediri",
+    "kind": "kota"
+  },
+  {
+    "code": "3572",
+    "name": "Kota Blitar",
+    "kind": "kota"
+  },
+  {
+    "code": "3573",
+    "name": "Kota Malang",
+    "kind": "kota"
+  },
+  {
+    "code": "3574",
+    "name": "Kota Probolinggo",
+    "kind": "kota"
+  },
+  {
+    "code": "3575",
+    "name": "Kota Pasuruan",
+    "kind": "kota"
+  },
+  {
+    "code": "3576",
+    "name": "Kota Mojokerto",
+    "kind": "kota"
+  },
+  {
+    "code": "3577",
+    "name": "Kota Madiun",
+    "kind": "kota"
+  },
+  {
+    "code": "3578",
+    "name": "Kota Surabaya",
+    "kind": "kota"
+  },
+  {
+    "code": "3579",
+    "name": "Kota Batu",
+    "kind": "kota"
+  }
+]

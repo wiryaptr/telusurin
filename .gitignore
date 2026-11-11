@@ -3,10 +3,6 @@
 out/
 build/
 
-# Production Data (PRD 14.3 - no secrets/private data)
-src/data/dataset/
-data/raw/
-
 # Environment
 .env
 .env.local

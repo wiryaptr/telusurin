@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
+import { Suspense, type ReactNode } from "react";
+import Link from "next/link";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
 import { StatusBadge } from "@/components/layout/StatusBadge";
-import { Suspense } from "react";
 import { resolveDatasetDir, getMeta, getIndicators, getSources, getObservations } from "@/server/data/DataRepository";
+import { PageSkeleton } from "@/components/ui/PageSkeleton";
 import type { Observation } from "@/domain/schemas";
 import type { DataStatus } from "@/domain/schemas";
 
@@ -16,6 +19,10 @@ const FIELD_LABELS: Record<string, string> = {
   pendidikan: "Pendidikan",
   kesehatan: "Kesehatan",
   infrastruktur_dasar: "Infrastruktur dasar",
+};
+
+export const metadata: Metadata = {
+  title: "Tentang dan metodologi",
 };
 
 export default async function MetodologiPage() {
@@ -35,20 +42,44 @@ export default async function MetodologiPage() {
     <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans animate-fade-in">
       <DataStatusBanner status={status} />
 
-      {/* Hero Header */}
-      <section className="px-4 py-24 sm:px-6 border-b border-rule text-center">
-        <div className="mx-auto max-w-[1280px]">
-          <h1 className="text-3xl font-bold text-ink sm:text-4xl mb-6">
-            Metodologi Telusurin
-          </h1>
-          <p className="mx-auto max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed">
-            Pahami bagaimana kami mengumpulkan, memverifikasi, dan menyajikan data layanan publik untuk menjaga transparansi dan integritas.
+      {/* Hero */}
+      <section className="px-4 pt-16 pb-16 text-center animate-fade-in-up">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-ink">Tentang dan metodologi</h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-muted leading-relaxed">
+            Satu halaman untuk menjelaskan siapa kami, dari mana angka itu berasal, bagaimana angka dihitung, dan seberapa jauh batasnya.
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="#tentang"
+              className="inline-flex h-10 items-center rounded-xl border border-rule px-6 text-sm font-bold text-ink transition hover:bg-ink/5"
+            >
+              Tentang
+            </a>
+            <a
+              href="#data"
+              className="inline-flex h-10 items-center rounded-xl border border-rule px-6 text-sm font-bold text-ink transition hover:bg-ink/5"
+            >
+              Data
+            </a>
+            <a
+              href="#cara-membaca"
+              className="inline-flex h-10 items-center rounded-xl border border-rule px-6 text-sm font-bold text-ink transition hover:bg-ink/5"
+            >
+              Cara membaca
+            </a>
+            <a
+              href="#batasan"
+              className="inline-flex h-10 items-center rounded-xl border border-rule px-6 text-sm font-bold text-ink transition hover:bg-ink/5"
+            >
+              Batasan
+            </a>
+          </div>
         </div>
       </section>
 
-      <div className="px-4 py-24 sm:px-6">
-        <Suspense fallback={null}>
+      <div className="px-4 pb-24 sm:px-6">
+        <Suspense fallback={<PageSkeleton />}>
           <MetodologiContent status={status} />
         </Suspense>
       </div>
@@ -65,282 +96,198 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
   ]);
 
   return (
-    <div className="space-y-12">
-      <div className="flex items-center gap-3">
-        <span className="text-sm font-medium text-ink-muted">Status dataset:</span>
-        <StatusBadge status={status} />
-      </div>
+    <>
+      <Part id="tentang" title="Tentang">
+        <p className="text-xl text-ink leading-relaxed">
+          Data layanan publik yang ingin dibandingkan seringkali hanya tersedia dalam dokumen PDF berat, tersebar di banyak halaman yang sulit diakses.
+        </p>
+        <p className="text-ink-muted leading-relaxed">
+          Telusurin tidak pernah menambah atau mengurangi angka. Nilai yang tidak tersedia dicatat sebagai belum tersedia, tanpa interpolasi atau penggantian.
+        </p>
+        <div className="bg-ink/[0.03] p-8 rounded-2xl border border-rule">
+          <p className="text-sm text-ink-muted leading-relaxed">Independen. Telusurin bukan produk BPS dan tidak didukung BPS.</p>
+        </div>
+      </Part>
 
-      {/* 1. Tujuan dan Cakupan */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Tujuan dan cakupan</h2>
-        <div className="grid gap-8 md:grid-cols-2">
+      <Part id="data" title="Data yang dipakai">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           <div>
-            <p className="text-base text-ink mb-4 leading-relaxed">
-              Telusurin membantu masyarakat memahami dan membandingkan indikator layanan publik dasar antardaerah menggunakan data yang dapat ditelusuri. Setiap informasi numerik dilengkapi satuan, periode, sumber, status data, dan batasan interpretasi.
+            <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">Provinsi</p>
+            <p className="mt-2 text-lg font-bold text-ink">{meta.province?.name ?? "-"}</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">Rentang tahun</p>
+            <p className="mt-2 text-lg font-bold text-ink">
+              {meta.years?.from ?? "-"} - {meta.years?.to ?? "-"}
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-4">Statistik Dataset</h3>
-            <dl className="space-y-3">
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Provinsi</dt>
-                <dd className="font-semibold text-ink">{meta.province?.name ?? "-"}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Jumlah indikator</dt>
-                <dd className="font-semibold text-ink">{indicators.length}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Cakupan geografis</dt>
-                <dd className="font-semibold text-ink">Kabupaten dan kota di {meta.province?.name ?? "-"}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Pembaruan data</dt>
-                <dd className="font-semibold text-ink">{meta.updatedAt}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Versi dataset</dt>
-                <dd className="font-semibold text-ink">{meta.version}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-ink-muted">Rentang tahun</dt>
-                <dd className="font-semibold text-ink">{meta.years?.from ?? "-"} – {meta.years?.to ?? "-"}</dd>
-              </div>
-            </dl>
+            <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">Jumlah indikator</p>
+            <p className="mt-2 text-lg font-bold text-ink">{indicators.length}</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-ink-muted">Versi dan tanggal pembaruan</p>
+            <p className="mt-2 text-lg font-bold text-ink">{meta.version ?? "-"}</p>
+            <p className="mt-1 text-xs text-ink-muted">{meta.updatedAt ?? "-"}</p>
           </div>
         </div>
-      </section>
 
-      {/* 2. Indikator */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Indikator yang digunakan</h2>
-        <div className="overflow-hidden rounded-xl border border-rule">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-ink/[0.03] text-ink-muted uppercase tracking-wider text-[10px] font-bold">
-                <tr>
-                  <th className="py-3 px-6">Kode</th>
-                  <th className="py-3 px-6">Nama</th>
-                  <th className="py-3 px-6">Bidang</th>
-                  <th className="py-3 px-6">Satuan</th>
-                  <th className="py-3 px-6">Definisi</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-rule">
-                {indicators.map((item) => (
-                  <tr key={item.code} className="hover:bg-ink/[0.01]">
-                    <td className="py-4 px-6 text-ink font-mono">{item.code}</td>
-                    <td className="py-4 px-6 text-ink font-bold">{item.name}</td>
-                    <td className="py-4 px-6 text-ink">{FIELD_LABELS[item.field] ?? item.field}</td>
-                    <td className="py-4 px-6 text-ink">{item.unit}</td>
-                    <td className="py-4 px-6 text-ink leading-relaxed max-w-md">{item.definition}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Sumber Data */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Sumber data</h2>
-        <div className="overflow-hidden rounded-xl border border-rule">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-ink/[0.03] text-ink-muted uppercase tracking-wider text-[10px] font-bold">
-                <tr>
-                  <th className="py-3 px-6">Tabel atau publikasi</th>
-                  <th className="py-3 px-6">Penerbit</th>
-                  <th className="py-3 px-6">URL</th>
-                  <th className="py-3 px-6">Diambil</th>
-                  <th className="py-3 px-6">Status ketentuan</th>
-                  <th className="py-3 px-6">Ketentuan dan atribusi</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-rule">
-                {sources.map((item) => (
-                  <tr key={item.id} className="hover:bg-ink/[0.01]">
-                    <td className="py-4 px-6 text-ink font-bold">{item.name}</td>
-                    <td className="py-4 px-6 text-ink">{item.publisher}</td>
-                    <td className="py-4 px-6 text-ink">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline break-all">
-                        {item.url}
-                      </a>
-                    </td>
-                    <td className="py-4 px-6 text-ink">{item.retrievedAt}</td>
-                    <td className="py-4 px-6 text-ink">
-                      <span className="px-2 py-1 rounded-md bg-ink/[0.05] font-medium text-[11px]">
-                        {STATUS_LABELS[item.termsStatus] ?? item.termsStatus}
-                      </span>
-                    </td>
-                    <td className="py-4 px-6 text-ink leading-relaxed max-w-sm">{item.termsNote}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <div className="grid gap-12 md:grid-cols-2">
-        {/* 4. Status Data */}
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-6">Status data</h2>
-          <dl className="space-y-6">
-            <div className="p-4 rounded-xl border border-rule/50 hover:bg-ink/[0.01]">
-              <dt className="font-bold text-ink mb-1">Resmi</dt>
-              <dd className="text-sm text-ink-muted leading-relaxed">
-                Data yang sumber, definisi, periode, satuan, dan ketentuan pakainya sudah diperiksa dan memenuhi kriteria integritas Telusurin.
-              </dd>
-            </div>
-            <div className="p-4 rounded-xl border border-rule/50 hover:bg-ink/[0.01]">
-              <dt className="font-bold text-ink mb-1">Belum terverifikasi (&dagger;)</dt>
-              <dd className="text-sm text-ink-muted leading-relaxed">
-                Data berasal dari sumber otoritas namun masih dalam proses peninjauan atau pemeriksaan lanjutan.
-              </dd>
-            </div>
-            <div className="p-4 rounded-xl border border-rule/50 hover:bg-ink/[0.01]">
-              <dt className="font-bold text-ink mb-1">Contoh (‡)</dt>
-              <dd className="text-sm text-ink-muted leading-relaxed">
-                Data simulasi yang digunakan khusus untuk pengujian. Angka ini tidak mencerminkan kenyataan.
-              </dd>
-            </div>
-          </dl>
-        </section>
-
-        {/* 5. Aturan dan Perhitungan */}
-        <section>
-          <h2 className="text-xl font-bold text-ink mb-6">Aturan & Perhitungan</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Nilai Kosong</h3>
-              <p className="text-sm text-ink leading-relaxed">
-                Nilai kosong disimpan sebagai <code className="font-mono bg-ink/5 px-1 rounded">null</code>. 
-                Tidak dilakukan interpolasi atau imputasi. UI menggunakan label &ldquo;Belum tersedia&rdquo;.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Selisih</h3>
-              <p className="text-sm text-ink leading-relaxed">
-                Selisih adalah nilai akhir dikurangi nilai awal, atau nilai daerah dikurangi rata-rata. Untuk indikator persen, selisih dinyatakan dalam poin persentase, bukan persen relatif. Dua nilai yang sama pada presisi tampilan dianggap tidak berubah.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Rata-rata</h3>
-              <p className="text-sm text-ink leading-relaxed">
-                Rata-rata sederhana dihitung dari semua daerah di dataset yang bernilai pada tahun itu. Bukan angka pada tingkat provinsi dan tidak dibobot jumlah penduduk.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mb-3">Peringkat</h3>
-              <p className="text-sm text-ink leading-relaxed">
-                Memakai urutan kompetisi (1, 2, 2, 4). Nilai kosong tidak diberi peringkat.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* 6. Insight */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Aturan pembentukan insight</h2>
-        <p className="text-sm text-ink leading-relaxed mb-6 max-w-3xl">
-          Insight dibuat dengan aturan tetap, tanpa model bahasa, dan hanya dari data berstatus resmi. Setiap kalimat menyebut cakupannya dan punya tautan &ldquo;Lihat dasar hitung&rdquo; berisi nilai dasar, rumus, arti hasil, keterbatasan, dan sumber.
+        <p className="text-sm text-ink-muted">
+          Cakupan geografis: Kabupaten dan kota di {meta.province?.name ?? "-"}. Status dataset:{" "}
+          <StatusBadge status={status} />
         </p>
-        <div className="overflow-x-auto rounded-xl border border-rule">
-          <table className="w-full text-left text-sm">
-            <thead className="bg-ink/[0.03] text-ink-muted uppercase tracking-wider text-[10px] font-bold">
-              <tr>
-                <th className="py-3 px-6">Aturan</th>
-                <th className="py-3 px-6">Syarat</th>
-                <th className="py-3 px-6">Rumus</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-rule">
-              <tr><td className="py-4 px-6 font-bold text-ink">Tertinggi dan terendah</td><td className="py-4 px-6 text-ink">Minimal 3 daerah terpilih punya nilai pada tahun terpilih</td><td className="py-4 px-6 font-mono text-ink">nilai tertinggi - nilai terendah</td></tr>
-              <tr><td className="py-4 px-6 font-bold text-ink">Perubahan</td><td className="py-4 px-6 text-ink">Daerah terpilih punya nilai pada tahun tersedia pertama dan terakhir</td><td className="py-4 px-6 font-mono text-ink">nilai_B - nilai_A</td></tr>
-              <tr><td className="py-4 px-6 font-bold text-ink">Terhadap rata-rata</td><td className="py-4 px-6 text-ink">Daerah punya nilai dan minimal 3 daerah di dataset punya nilai pada tahun itu</td><td className="py-4 px-6 font-mono text-ink">nilai daerah - rata-rata sederhana</td></tr>
-              <tr><td className="py-4 px-6 font-bold text-ink">Kelengkapan</td><td className="py-4 px-6 text-ink">Ada daerah terpilih tanpa nilai pada tahun terpilih</td><td className="py-4 px-6 font-mono text-ink">jumlah daerah tanpa nilai</td></tr>
-              <tr><td className="py-4 px-6 font-bold text-ink">Data belum cukup</td><td className="py-4 px-6 text-ink">Syarat di atas tidak terpenuhi; kalimat menyebut alasannya</td><td className="py-4 px-6 font-mono text-ink">-</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
 
-      {/* 7. Keterbatasan */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Keterbatasan perbandingan</h2>
-        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
-          {meta.limitations.map((item) => (<li key={item}>{item}</li>))}
-          <li>Rata-rata sederhana tidak dibobot jumlah penduduk dan bukan angka resmi provinsi.</li>
-          <li>Perbedaan definisi, metode survei, atau tahun acuan antarsumber dapat memengaruhi perbandingan.</li>
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Indikator</h3>
+        <ul className="divide-y divide-rule">
+          {indicators.map((item) => (
+            <li key={item.code}>
+              <p className="font-bold text-ink">{item.name}</p>
+              <p className="mt-1 text-xs text-ink-muted">
+                {FIELD_LABELS[item.field] ?? item.field} &middot; {item.unit} &middot; {item.code}
+              </p>
+              <p className="mt-2 text-sm text-ink-muted leading-relaxed">{item.definition}</p>
+            </li>
+          ))}
         </ul>
-        <h3 className="text-sm font-bold uppercase tracking-wider text-ink-muted mt-8 mb-3">Yang tidak bisa disimpulkan dari data ini</h3>
-        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
-          <li>Nilai yang lebih tinggi tidak otomatis berarti layanan lebih baik atau lebih buruk.</li>
-          <li>Perbedaan antardaerah bukan bukti keberhasilan atau kegagalan pemerintah daerah.</li>
-          <li>Hubungan sebab dan akibat tidak dapat dibuktikan dari angka ini.</li>
-          <li>Kondisi di dalam satu daerah, misalnya antarkecamatan atau antarkelompok, tidak tampak.</li>
-          <li>Tahun atau daerah tanpa nilai tidak dapat diperkirakan dari tahun atau daerah lain.</li>
-          <li>Telusurin bukan produk BPS dan tidak didukung BPS.</li>
-        </ul>
-      </section>
 
-      {/* 8. Changelog */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Catatan perubahan dataset</h2>
-        <ol className="space-y-3 text-sm text-ink">
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Sumber</h3>
+        <ul className="divide-y divide-rule">
+          {sources.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-ink underline decoration-dotted underline-offset-2 hover:text-accent"
+              >
+                {item.name}
+              </a>
+              <p className="mt-1 text-xs text-ink-muted">
+                {item.publisher} &middot; {item.retrievedAt} &middot; {STATUS_LABELS[item.termsStatus] ?? item.termsStatus}
+              </p>
+              <p className="mt-2 text-sm text-ink-muted leading-relaxed">{item.termsNote}</p>
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Catatan perubahan</h3>
+        <ol className="space-y-3">
           {meta.changelog.map((item) => (
             <li key={`${item.version}-${item.date}`} className="flex gap-4">
               <span className="font-mono font-bold shrink-0">v{item.version}</span>
               <span className="text-ink-muted shrink-0">{item.date}</span>
-              <span>{item.change}</span>
+              <span className="text-ink">{item.change}</span>
             </li>
           ))}
         </ol>
-      </section>
+      </Part>
 
-      {/* 9. Tentang Telusurin */}
-      <section className="bg-white border border-rule shadow-sm rounded-2xl p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <h2 className="text-2xl font-bold text-ink mb-6 pb-4 border-b border-rule">Tentang Telusurin</h2>
-        <div className="max-w-3xl">
-          <p className="text-xl text-ink-muted leading-relaxed">
-            Telusurin lahir dari kebutuhan akan transparansi data publik yang mudah diakses, dimengerti, dan diverifikasi oleh siapa saja.
-          </p>
-          <div className="mt-8 space-y-8">
-            <section>
-              <h3 className="text-xl font-bold text-ink mb-4">Visi &amp; Misi</h3>
-              <p className="text-ink-muted leading-relaxed">
-                Visi kami adalah menjadi jembatan antara data publik yang kompleks dengan pemahaman masyarakat. Misi kami adalah menyediakan platform pembanding data yang jujur, tanpa manipulasi, dan sepenuhnya dapat ditelusuri ke sumber aslinya.
-              </p>
-            </section>
-            <section>
-              <h3 className="text-xl font-bold text-ink mb-4">Mengapa Telusurin?</h3>
-              <p className="text-ink-muted leading-relaxed">
-                Seringkali, membandingkan performa layanan publik antar daerah menjadi tantangan karena data tersebar di berbagai dokumen PDF yang sulit diolah. Telusurin hadir untuk mengumpulkan data tersebut ke dalam satu dashboard terpadu, menjadikannya alat bantu pengambilan keputusan berbasis fakta untuk setiap warga.
-              </p>
-            </section>
-            <section>
-              <h3 className="text-xl font-bold text-ink mb-4">Penafian &amp; Independensi</h3>
-              <div className="bg-ink/[0.03] p-8 rounded-2xl border border-rule">
-                <p className="text-sm text-ink-muted leading-relaxed">
-                  Telusurin adalah inisiatif independen yang dikembangkan untuk kompetisi WIA MIA 2026. Kami menggunakan data statistik resmi (seperti BPS) sebagai sumber utama, namun <strong>Telusurin tidak memiliki hubungan struktural, afiliasi, maupun dukungan resmi dari badan terkait.</strong>
-                </p>
-              </div>
-            </section>
-            <section>
-              <h3 className="text-xl font-bold text-ink mb-4">Prinsip Data Kami</h3>
-              <ul className="space-y-4">
-                <li><strong className="text-ink">Bebas Asumsi:</strong> Kami tidak menambah atau mengurangi angka. Jika data tidak tersedia, kami tampilkan apa adanya.</li>
-                <li><strong className="text-ink">Audit-Ready:</strong> Setiap angka dilengkapi ID sumber agar Anda dapat melakukan audit silang secara mandiri.</li>
-                <li><strong className="text-ink">Netral:</strong> Platform ini tidak memberikan opini daerah mana yang &ldquo;terbaik&rdquo;, melainkan menyajikan fakta numerik untuk interpretasi Anda.</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
-    </div>
+      <Part id="cara-membaca" title="Cara membaca angka">
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Status data</h3>
+        <ul className="divide-y divide-rule">
+          <li>
+            <p className="font-bold text-ink">Resmi</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+              Sumber, definisi, periode, satuan, dan ketentuan pakai sudah diperiksa memenuhi kriteria integritas Telusurin.
+            </p>
+          </li>
+          <li>
+            <p className="font-bold text-ink">Belum terverifikasi</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+              Data berasal dari sumber otoritas namun masih dalam proses peninjauan lanjutan.
+            </p>
+          </li>
+          <li>
+            <p className="font-bold text-ink">Contoh</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+              Data simulasi yang digunakan khusus untuk pengujian. Angka ini tidak mencerminkan kenyataan.
+            </p>
+          </li>
+        </ul>
+
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Perhitungan</h3>
+        <ul className="divide-y divide-rule">
+          <li>
+            <p className="font-bold text-ink">Nilai kosong</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">Disimpan sebagai belum tersedia. Tidak dilakukan interpolasi atau imputasi.</p>
+          </li>
+          <li>
+            <p className="font-bold text-ink">Selisih</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+              Nilai akhir dikurangi nilai awal, atau nilai daerah dikurangi rata-rata. Untuk indikator persen, selisihnya dalam poin persentase.
+            </p>
+          </li>
+          <li>
+            <p className="font-bold text-ink">Rata-rata</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+              Rata-rata sederhana dari semua daerah yang bernilai pada tahun terpilih. Bukan angka resmi provinsi dan tidak dibobot jumlah penduduk.
+            </p>
+          </li>
+          <li>
+            <p className="font-bold text-ink">Peringkat</p>
+            <p className="mt-1 text-sm text-ink-muted leading-relaxed">Urutan kompetisi 1, 2, 2, 4. Nilai kosong tidak diberi peringkat.</p>
+          </li>
+        </ul>
+
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Ringkasan otomatis</h3>
+        <p className="text-sm text-ink-muted">
+          Insight dibuat dari data berstatus resmi dengan aturan tetap, tanpa model bahasa.
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed">
+          <li>
+            <span className="font-bold text-ink">Tertinggi dan terendah:</span> minimal 3 daerah terpilih punya nilai pada tahun terpilih. Rumus: nilai tertinggi - nilai terendah.
+          </li>
+          <li>
+            <span className="font-bold text-ink">Perubahan:</span> daerah terpilih punya nilai pada tahun tersedia pertama dan terakhir. Rumus: nilai terakhir - nilai pertama.
+          </li>
+          <li>
+            <span className="font-bold text-ink">Terhadap rata-rata:</span> daerah terpilih punya nilai dan minimal 3 daerah di dataset punya nilai. Rumus: nilai daerah - rata-rata sederhana.
+          </li>
+          <li>
+            <span className="font-bold text-ink">Kelengkapan:</span> ada daerah terpilih tanpa nilai pada tahun terpilih. Rumus: jumlah daerah tanpa nilai.
+          </li>
+          <li>
+            <span className="font-bold text-ink">Data belum cukup:</span> syarat di atas tidak terpenuhi, maka kalimat insight menyebut alasannya.
+          </li>
+        </ul>
+      </Part>
+
+      <Part id="batasan" title="Batasan">
+        <ul className="list-disc pl-5 space-y-2 text-sm text-ink leading-relaxed max-w-3xl">
+          {meta.limitations.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+          <li>Nilai yang lebih tinggi tidak otomatis berarti layanan lebih baik atau lebih buruk.</li>
+          <li>Penggunaan perbandingan ini bukan bukti keberhasilan atau kegagalan pemerintah daerah.</li>
+          <li>Tidak dapat membuktikan hubungan sebab dan akibat dari angka ini.</li>
+          <li>Kondisi di dalam satu daerah, misalnya antarkecamatan atau antarkelompok, tidak tampak.</li>
+          <li>Tahun atau daerah tanpa nilai tidak dapat diperkirakan dari tahun atau daerah lain.</li>
+          <li>Perbedaan definisi, metode survei, atau tahun acuan antarsumber dapat memengaruhi perbandingan.</li>
+        </ul>
+        <Link
+          href="/dashboard"
+          className="inline-flex h-12 items-center justify-center rounded-xl bg-ink px-8 text-sm font-bold text-white transition hover:opacity-90"
+        >
+          Buka dashboard
+        </Link>
+      </Part>
+    </>
+  );
+}
+
+interface PartProps {
+  id: string;
+  title: string;
+  children: ReactNode;
+}
+
+function Part({ id, title, children }: PartProps) {
+  return (
+    <section id={id} className="scroll-mt-8 py-16 md:grid md:grid-cols-[220px_1fr] md:gap-12">
+      <h2 className="text-2xl font-bold tracking-tight text-ink md:col-start-1">{title}</h2>
+      <div className="min-w-0 space-y-8 md:col-start-2">
+        <div className="mx-auto max-w-[1120px] px-4 sm:px-6">{children}</div>
+      </div>
+    </section>
   );
 }

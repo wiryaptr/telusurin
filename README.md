@@ -6,7 +6,6 @@ Dikembangkan untuk WIA MIA 2026. Tema: *Designing Digital Futures: Powering Publ
 
 > Telusurin bukan produk BPS dan tidak didukung BPS.
 
-<<<<<<< HEAD
 ![Landing](docs/screenshots/landing.png)
 
 ![Dashboard](docs/screenshots/Dashboard.png)
@@ -16,13 +15,6 @@ Dikembangkan untuk WIA MIA 2026. Tema: *Designing Digital Futures: Powering Publ
 ## Status saat ini (Draf Pertama)
 
 Data pada draf ini masih **simulasi** (status `contoh`). Data resmi menyusul di tahap Final.
-=======
-<!-- Screenshot: -->
-
-## Status saat ini (Final)
-
-Fitur F1 sampai F10 sudah diimplementasikan. Data pada repository ini masih **simulasi** (status `contoh`); dataset resmi BPS harus diimpor tim sebelum pengumpulan (lihat "Yang masih harus dikerjakan tim").
->>>>>>> 7904ff0 (feat: BPS production dataset integration and final-stage polish)
 
 | Bagian | Status |
 | --- | --- |

@@ -16,6 +16,7 @@ import { buildCsvRows } from "@/lib/csv";
 import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
 import { Accordion } from "@/components/ui/Accordion";
+import { PageSkeleton } from "@/components/ui/PageSkeleton";
 import { StatusBadge } from "@/components/layout/StatusBadge";
 import { getStatusInfo } from "@/lib/status";
 import type { DataStatus, Indicator, Observation, Region } from "@/domain/schemas";
@@ -27,7 +28,7 @@ export default async function DashboardPage({
   searchParams: Promise<{ i?: string; y?: string; r?: string }>;
 }) {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<PageSkeleton />}>
       <Dashboard searchParams={searchParams} />
     </Suspense>
   );

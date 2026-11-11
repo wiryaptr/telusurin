@@ -5,18 +5,15 @@ import { siteConfig } from "@/config/site";
 import { DataStatusBanner } from "@/components/layout/DataStatusBanner";
 import { ComparisonChart } from "@/features/dashboard/ComparisonChart";
 import { Accordion } from "@/components/ui/Accordion";
+import { AccordionItem } from "@/components/ui/AccordionItem";
+import { PageSkeleton } from "@/components/ui/PageSkeleton";
+import { MAX_SELECTED_REGIONS } from "@/domain/constants";
 import type { DataStatus } from "@/domain/schemas";
-
-const FIELD_LABELS: Record<string, string> = {
-  pendidikan: "Pendidikan",
-  kesehatan: "Kesehatan",
-  infrastruktur_dasar: "Infrastruktur dasar",
-};
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-sans animate-fade-in">
-      <Suspense fallback={null}>
+      <Suspense fallback={<PageSkeleton />}>
         <Landing />
       </Suspense>
     </div>
@@ -135,35 +132,80 @@ async function Landing() {
         </div>
       </section>
 
-      {/* Data Table Section */}
-      <section className="px-4 py-24 sm:px-6 bg-ink/[0.02] border-y border-rule animate-fade-in-up">
+      {/* Data yang tersedia */}
+      <section className="px-4 pt-20 pb-16 sm:px-6 bg-ink/[0.02] animate-fade-in-up">
         <div className="mx-auto max-w-[1120px]">
           <h2 className="text-3xl font-bold tracking-tight text-ink mb-12">Data yang tersedia</h2>
-          <div className="overflow-hidden rounded-2xl border border-rule bg-white shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-rule bg-ink/[0.03] text-xs font-bold uppercase tracking-wider text-ink-muted">
-                    <th className="py-4 px-6">Indikator</th>
-                    <th className="py-4 px-6">Bidang</th>
-                    <th className="py-4 px-6">Satuan</th>
-                    <th className="py-4 px-6 text-right">Tahun</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-rule">
-                  {indicators.map((item) => (
-                    <tr key={item.code} className="transition hover:bg-ink/[0.01]">
-                      <td className="py-5 px-6 text-sm font-semibold text-ink">{item.name}</td>
-                      <td className="py-5 px-6 text-sm text-ink-muted">{FIELD_LABELS[item.field] ?? item.field}</td>
-                      <td className="py-5 px-6 text-sm text-ink-muted">{item.unitShort}</td>
-                      <td className="py-5 px-6 text-sm text-ink-muted text-right tabular-nums">
-                        {meta.years?.from}&ndash;{meta.years?.to}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          <div>
+            {indicators.map((item) => (
+              <AccordionItem key={item.code} title={item.name} badge={`${item.field} · ${item.unit}`}>
+                <div className="px-5 pb-5">
+                  <p className="text-sm text-ink-muted leading-relaxed">{item.definition}</p>
+                  <p className="mt-3 text-sm text-ink-muted">Satuan: {item.unit}</p>
+                  <p className="mt-1 text-sm text-ink-muted">Tahun: {meta.years.from} sampai {meta.years.to}</p>
+                  {sources
+                    .filter((source) => item.sourceIds.includes(source.id))
+                    .map((source) => (
+                      <p key={source.id} className="mt-3 text-sm text-ink-muted">
+                        Sumber:{" "}
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                          {source.name}
+                        </a>
+                      </p>
+                    ))}
+                  <Link
+                    href={`/dashboard?i=${item.code}`}
+                    className="mt-4 inline-flex h-12 items-center justify-center rounded-xl bg-ink px-6 text-sm font-bold text-white transition hover:opacity-90"
+                  >
+                    Lihat di dashboard
+                  </Link>
+                </div>
+              </AccordionItem>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section aria-labelledby="faq-judul" className="px-4 pt-16 pb-24 sm:px-6 animate-fade-in-up">
+        <div className="mx-auto max-w-[1120px]">
+          <h2 id="faq-judul" className="text-3xl font-bold tracking-tight text-ink mb-12">Pertanyaan umum</h2>
+          <div>
+            <AccordionItem title="Dari mana data Telusurin berasal?">
+              <div className="px-5 pb-5">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Dari tabel statistik BPS Provinsi Jawa Timur. Setiap angka menyertakan sumber, tanggal ambil, dan status data. Daftar lengkapnya ada di halaman Tentang.
+                </p>
+              </div>
+            </AccordionItem>
+            <AccordionItem title="Apakah Telusurin produk BPS?">
+              <div className="px-5 pb-5">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Bukan. Telusurin independen dan tidak didukung BPS. Data dipakai sesuai ketentuan penggunaan BPS dengan mencantumkan sumbernya.
+                </p>
+              </div>
+            </AccordionItem>
+            <AccordionItem title="Apakah nilai lebih tinggi berarti layanan lebih baik?">
+              <div className="px-5 pb-5">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Belum tentu. Arah penilaian bergantung pada definisi indikator, dan perbedaan antardaerah bukan bukti keberhasilan atau kegagalan pemerintah daerah.
+                </p>
+              </div>
+            </AccordionItem>
+            <AccordionItem title="Mengapa ada data yang belum tersedia?">
+              <div className="px-5 pb-5">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Kami tidak mengisi atau memperkirakan angka yang tidak dipublikasikan sumber. Nilai kosong ditulis apa adanya dan tidak ikut dihitung.
+                </p>
+              </div>
+            </AccordionItem>
+            <AccordionItem title="Berapa daerah yang bisa dibandingkan, dan bisakah datanya diunduh?">
+              <div className="px-5 pb-5">
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  Sampai {MAX_SELECTED_REGIONS} daerah sekaligus. Data yang sedang tampil bisa diunduh sebagai CSV dari tabel di dashboard.
+                </p>
+              </div>
+            </AccordionItem>
           </div>
         </div>
       </section>

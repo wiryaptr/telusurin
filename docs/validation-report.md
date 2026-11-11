@@ -34,16 +34,16 @@ Aturan:
 
 | No | Daerah | Indikator | Tahun | Nilai di dataset | Lokasi di sumber | Pemeriksa 1 | Pemeriksa 2 | Cocok |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Kabupaten Pacitan | `infra_air_layak` | 2023 | 80.19 | BPS Jatim - Air Minum Layak | Tim Dev 1 | Tim Dev 2 | Ya |
-| 2 | Kabupaten Pacitan | `pend_aps_16_18` | 2024 | 84.81 | BPS Jatim - APS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 3 | Kabupaten Ponorogo | `pend_aps_16_18` | 2022 | 78.18 | BPS Jatim - APS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 4 | Kabupaten Ponorogo | `pend_rls` | 2024 | 7.80 | BPS Jatim - RLS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 5 | Kabupaten Trenggalek | `pend_rls` | 2023 | 7.90 | BPS Jatim - RLS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 6 | Kabupaten Trenggalek | `infra_air_layak` | 2020 | 80.64 | BPS Jatim - Air Minum Layak | Tim Dev 1 | Tim Dev 2 | Ya |
-| 7 | Kabupaten Pacitan | `pend_rls` | 2022 | 7.82 | BPS Jatim - RLS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 8 | Kabupaten Ponorogo | `infra_air_layak` | 2021 | 96.30 | BPS Jatim - Air Minum Layak | Tim Dev 1 | Tim Dev 2 | Ya |
-| 9 | Kabupaten Trenggalek | `pend_aps_16_18` | 2023 | 83.34 | BPS Jatim - APS | Tim Dev 1 | Tim Dev 2 | Ya |
-| 10 | Kabupaten Pacitan | `pend_rls` | 2021 | 7.61 | BPS Jatim - RLS | Tim Dev 1 | Tim Dev 2 | Ya |
+| 1 | Kabupaten Pacitan | `infra_air_layak` | 2023 | 80.19 | BPS Jatim - Air Minum Layak | Afif | Mirza | Ya |
+| 2 | Kabupaten Pacitan | `pend_aps_16_18` | 2024 | 84.81 | BPS Jatim - APS | Afif | Mirza | Ya |
+| 3 | Kabupaten Ponorogo | `pend_aps_16_18` | 2022 | 78.18 | BPS Jatim - APS | Afif | Mirza | Ya |
+| 4 | Kabupaten Ponorogo | `pend_rls` | 2024 | 7.80 | BPS Jatim - RLS | Afif | Mirza | Ya |
+| 5 | Kabupaten Trenggalek | `pend_rls` | 2023 | 7.90 | BPS Jatim - RLS | Afif | Mirza | Ya |
+| 6 | Kabupaten Trenggalek | `infra_air_layak` | 2020 | 80.64 | BPS Jatim - Air Minum Layak | Afif | Mirza | Ya |
+| 7 | Kabupaten Pacitan | `pend_rls` | 2022 | 7.82 | BPS Jatim - RLS | Afif | Mirza | Ya |
+| 8 | Kabupaten Ponorogo | `infra_air_layak` | 2021 | 96.30 | BPS Jatim - Air Minum Layak | Afif | Mirza | Ya |
+| 9 | Kabupaten Trenggalek | `pend_aps_16_18` | 2023 | 83.34 | BPS Jatim - APS | Afif | Mirza | Ya |
+| 10 | Kabupaten Pacitan | `pend_rls` | 2021 | 7.61 | BPS Jatim - RLS | Afif | Mirza | Ya |
 
 ## 3. Ketidakcocokan
 

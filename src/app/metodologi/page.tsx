@@ -183,7 +183,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
       </Part>
 
       <Part id="cara-membaca" title="Cara membaca angka">
-        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Status data</h3>
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted mb-6">Status data</h3>
         <ul className="divide-y divide-rule">
           <li>
             <p className="font-bold text-ink">Resmi</p>
@@ -205,7 +205,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
           </li>
         </ul>
 
-        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Perhitungan</h3>
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted mb-6">Perhitungan</h3>
         <ul className="divide-y divide-rule">
           <li>
             <p className="font-bold text-ink">Nilai kosong</p>
@@ -229,7 +229,7 @@ async function MetodologiContent({ status }: { status: DataStatus }) {
           </li>
         </ul>
 
-        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted">Ringkasan otomatis</h3>
+        <h3 className="text-xs font-bold uppercase tracking-widest text-ink-muted mb-6">Ringkasan otomatis</h3>
         <p className="text-sm text-ink-muted">
           Insight dibuat dari data berstatus resmi dengan aturan tetap, tanpa model bahasa.
         </p>

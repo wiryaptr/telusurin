@@ -71,7 +71,7 @@ export function ComparisonChart({
   return (
     <section className="space-y-4">
       <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
-        <h3 className="mb-1 text-lg font-bold text-ink">{indicatorName}</h3>
+        <h3 className="mb-1 text-2xl font-bold text-ink">{indicatorName}</h3>
         <p className="mb-4 text-sm text-ink-muted">Tahun {year} • Satuan: {unitShort}</p>
         
         <div className="relative overflow-x-auto">

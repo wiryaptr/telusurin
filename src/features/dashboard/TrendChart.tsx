@@ -38,7 +38,7 @@ export function TrendChart({
   if (years.length === 0 || regionCodes.length === 0) {
     return (
       <section className="bg-white p-6 rounded-2xl border border-rule shadow-sm">
-        <h3 className="mb-4 text-lg font-bold text-ink">
+        <h3 className="mb-4 text-2xl font-bold text-ink">
           Tren {indicatorName} per tahun
         </h3>
         <p className="text-sm text-ink-muted">Tidak ada data untuk pilihan yang sedang ditampilkan.</p>

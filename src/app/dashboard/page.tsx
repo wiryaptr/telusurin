@@ -100,10 +100,10 @@ async function Dashboard({
                          filteredObservations.some(o => o.status === "belum_terverifikasi") ? "belum_terverifikasi" : "resmi";
 
   return (
-    <main className="mx-auto w-full max-w-[1280px] flex-1 flex-col font-sans animate-fade-in">
+    <main className="mx-auto w-full max-w-[1600px] flex-1 flex-col font-sans animate-fade-in">
       <DataStatusBanner status={datasetStatus} />
-      <div className="px-4 py-8 sm:px-6 lg:flex lg:gap-8 lg:py-10">
-        <aside className="mb-6 shrink-0 lg:mb-0 lg:w-80">
+      <div className="px-4 py-8 sm:px-8 lg:flex lg:gap-12 lg:px-12 lg:py-12">
+        <aside className="mb-8 shrink-0 lg:mb-0 lg:w-80">
           <div className="sticky top-6 rounded-2xl border border-rule bg-white p-5 shadow-sm">
             <h2 className="mb-5 border-b border-rule pb-3 font-sans text-lg font-bold text-ink">Pilih data</h2>
             <FilterPanel
@@ -118,54 +118,58 @@ async function Dashboard({
           </div>
         </aside>
 
-        <div className="min-w-0 flex-1 space-y-6">
+        <div className="min-w-0 flex-1 space-y-12">
         {notification && (
           <NotificationBanner message={notification} />
         )}
-        <div className="rounded-2xl border border-rule bg-white p-6 shadow-sm animate-fade-in-up">
-          <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
-            <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-              {indicator.name}
-            </h1>
-            <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
-              {indicator.unitShort}
-            </span>
-          </div>
-          <p className="text-sm text-ink-muted">Cakupan: {coverageText}</p>
-        </div>
+        <header className="animate-fade-in-up">
+          <p className="flex flex-wrap items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-ink-muted">
+            <span className="text-accent">Dashboard</span>
+            <span aria-hidden="true">/</span>
+            <span>{indicator.unitShort}</span>
+          </p>
+          <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            {indicator.name}
+          </h1>
+          <p className="mt-5 text-lg text-ink-muted">Cakupan: {coverageText}</p>
+        </header>
 
-        {/* KPI strip */}
-        <section className="grid gap-4 sm:grid-cols-3" aria-label="Ringkasan indikator">
-          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Rata-rata wilayah</p>
-            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">
-              {meanResult.mean !== null
-                ? meanResult.mean.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals })
-                : "-"}
-            </p>
-            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Rata-rata antar daerah pada tahun {year}</p>
-          </div>
-          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Jumlah daerah terdata</p>
-            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">{meanResult.n}</p>
-            <p className="mt-1 text-xs text-ink-muted">Dari total {regions.length} wilayah BPS Jatim pada tahun {year}</p>
-          </div>
-          <div className="bg-white p-6 rounded-2xl border border-rule shadow-sm animate-fade-in-up">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">Rentang nilai</p>
-            <p className="mt-2 text-3xl font-extrabold tracking-tight text-ink tabular-nums">
-              {(() => {
-                const values = filteredObservations.filter((o) => o.year === year && o.value !== null).map((o) => o.value as number);
-                if (values.length < 2) return "-";
-                const max = Math.max(...values);
-                const min = Math.min(...values);
-                const fmt = (v: number) => v.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals });
-                return fmt(min) + " – " + fmt(max);
-              })()}
-            </p>
-            <p className="mt-1 text-xs text-ink-muted">{indicator.unitShort} · Terendah sampai tertinggi di daerah terpilih</p>
-          </div>
+        {/* KPI */}
+        <section aria-label="Ringkasan indikator">
+          <dl className="grid gap-x-10 gap-y-10 sm:grid-cols-3">
+            <div className="border-t border-rule pt-6">
+              <dt className="text-xs font-bold uppercase tracking-[0.2em] text-ink-muted">Rata-rata wilayah</dt>
+              <dd className="mt-4 text-4xl font-extrabold leading-none tracking-tight text-ink tabular-nums 2xl:text-5xl">
+                {meanResult.mean !== null
+                  ? meanResult.mean.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals })
+                  : "-"}
+              </dd>
+              <p className="mt-4 text-base text-ink-muted">{indicator.unitShort} · Rata-rata antar daerah pada tahun {year}</p>
+            </div>
+            <div className="border-t border-rule pt-6">
+              <dt className="text-xs font-bold uppercase tracking-[0.2em] text-ink-muted">Jumlah daerah terdata</dt>
+              <dd className="mt-4 text-4xl font-extrabold leading-none tracking-tight text-ink tabular-nums 2xl:text-5xl">{meanResult.n}</dd>
+              <p className="mt-4 text-base text-ink-muted">Dari total {regions.length} wilayah BPS Jatim pada tahun {year}</p>
+            </div>
+            <div className="border-t border-rule pt-6">
+              <dt className="text-xs font-bold uppercase tracking-[0.2em] text-ink-muted">Rentang nilai</dt>
+              <dd className="mt-4 text-4xl font-extrabold leading-none tracking-tight text-ink tabular-nums 2xl:text-5xl">
+                {(() => {
+                  const values = filteredObservations.filter((o) => o.year === year && o.value !== null).map((o) => o.value as number);
+                  if (values.length < 2) return "-";
+                  const max = Math.max(...values);
+                  const min = Math.min(...values);
+                  const fmt = (v: number) => v.toLocaleString("id-ID", { minimumFractionDigits: indicator.decimals, maximumFractionDigits: indicator.decimals });
+                  return fmt(min) + "–" + fmt(max);
+                })()}
+              </dd>
+              <p className="mt-4 text-base text-ink-muted">{indicator.unitShort} · Terendah sampai tertinggi di daerah terpilih</p>
+            </div>
+          </dl>
         </section>
 
+        <div>
+          <SectionLabel no="01" title="Tren per tahun" />
         <TrendChart
           regions={regions.map((item) => ({ code: item.code, name: item.name }))}
           regionCodes={regionCodes}
@@ -175,6 +179,9 @@ async function Dashboard({
           indicatorName={indicator.name}
           decimals={indicator.decimals}
         />
+        </div>
+        <div>
+          <SectionLabel no="02" title={`Perbandingan tahun ${year}`} />
         <ComparisonChart
           regions={regions.map((item) => ({ code: item.code, name: item.name }))}
           regionCodes={regionCodes}
@@ -185,14 +192,23 @@ async function Dashboard({
           unitShort={indicator.unitShort}
           indicatorName={indicator.name}
         />
+        </div>
+        <div>
+          <SectionLabel no="03" title="Sumber dan cara membaca" />
         <ChartFooterServer
           indicator={indicator}
           observations={filteredObservations}
           sources={sources}
         />
-        <InsightList insights={insights} sources={sources} decimals={indicator.decimals} />
+        </div>
+        <div>
+          <SectionLabel no="04" title="Insight otomatis" />
+          <InsightList insights={insights} sources={sources} decimals={indicator.decimals} />
+        </div>
 
 
+        <div className="space-y-6">
+          <SectionLabel no="05" title="Data" />
         {siteConfig.features.csv && (
           <DownloadCsvButton rows={csvRows} indicatorCode={indicator.code} />
         )}
@@ -205,12 +221,22 @@ async function Dashboard({
           indicator={indicator}
           meanResult={meanResult}
         />
+        </div>
       </div>
     </div>
   </main>
 );
 }
 
+
+function SectionLabel({ no, title }: { no: string; title: string }) {
+  return (
+    <p className="mb-6 flex items-baseline gap-4 border-t border-rule pt-6 text-sm font-bold uppercase tracking-[0.2em] text-ink-muted">
+      <span className="tabular-nums text-accent">{no}</span>
+      <span>{title}</span>
+    </p>
+  );
+}
 
 function DataTableServer({
   regions,
@@ -339,7 +365,7 @@ function ChartFooterServer({
 
   return (
     <section className="space-y-4 rounded-2xl border border-rule bg-white p-6 shadow-sm">
-      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink">
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-ink">
         <p>
           <span className="font-bold">Sumber:</span>{" "}
           <span className="underline decoration-dotted underline-offset-2">{source?.name ?? "-"}</span> ({source?.publisher ?? "-"})
@@ -354,15 +380,15 @@ function ChartFooterServer({
         </div>
       </div>
       <div className="grid gap-4 border-t border-rule/50 pt-4 sm:grid-cols-2">
-        <div className="space-y-1 text-xs leading-relaxed text-ink-muted">
-          <p className="font-bold text-ink uppercase tracking-wider text-[10px]">Cara membaca</p>
+        <div className="space-y-2 text-base leading-relaxed text-ink-muted">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink">Cara membaca</p>
           <p>
             Setiap angka disertai satuan, periode, dan sumber. Perbedaan angka antardaerah bukan
             bukti keberhasilan atau kegagalan pemerintah daerah.
           </p>
         </div>
-        <div className="space-y-1 text-xs leading-relaxed text-ink-muted">
-          <p className="font-bold text-ink uppercase tracking-wider text-[10px]">Batas interpretasi</p>
+        <div className="space-y-2 text-base leading-relaxed text-ink-muted">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink">Batas interpretasi</p>
           <p>
             Nilai yang lebih tinggi tidak otomatis berarti kondisi lebih baik;
             arah penilaian bergantung pada definisi indikator.
